@@ -7,20 +7,31 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        
+    </style>
 
     <title>RoktoMan</title>
   </head>
   <body background="https://wallpapercave.com/wp/NkSZ4lT.jpg">
     <div id="headMain" style="height: 50px; background-color: white; margin: 10px; opacity: 0.8">
         <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle float-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin: 6px; width: 80px">
-                List
+              <button class="btn btn-secondary dropdown-toggle float-right" type="button" id="bearoktoman" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin: 6px;">
+                Be a Roktoman 
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/donate">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-menu" aria-labelledby="bearoktoman">
+                <a class="dropdown-item" href="#">A+(ve)</a>
+                <a class="dropdown-item" href="#">A-(ve)</a>
+                <a class="dropdown-item" href="#">B+(ve)</a>
+                <a class="dropdown-item" href="#">B-(ve)</a>
+                <a class="dropdown-item" href="#">AB+(ve)</a>
+                <a class="dropdown-item" href="#">AB-(ve)</a>
+                <a class="dropdown-item" href="#">O+(ve)</a>
+                <a class="dropdown-item" href="#">O-(ve)</a>
               </div>
+        </div>
+        <div class="btn btn-secondary float-right" style="margin: 6px">
+            <a href="/donate" style="color: white"> Search </a>
         </div>
     </div>
     <!--
