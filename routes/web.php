@@ -17,3 +17,8 @@ Route::get('/', function () {
 Route::get('/donate',function() {
 	return view('donation');
 });
+
+//home root
+Route::get('/home','FrontController@index');
+//register root
+Route::get('/register','RegisterController@register');

@@ -1,0 +1,612 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+
+h1{}
+span{
+	color: #e60d0d;
+}
+.ptb-100{
+	padding: 100px 0;
+}
+.box_bttn {
+	display: inline-block;
+	background-color: #e60d0d;
+	color: white;
+	padding: 15px 20px;
+	margin: 20px 5px;
+	text-transform: capitalize;
+	font-size: 19px;
+}
+.box_bttn:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #d52020;
+}
+.border_bttn {
+	border: 2px solid #e60d0d;
+	color: white;
+	padding: 15px 20px;
+	text-transform: capitalize;
+	font-size: 19px;
+	margin: 20px 5px;
+}
+.border_bttn:hover{
+	border: 2px solid #d52020;
+	text-decoration: none;
+	color: white;
+}
+.underline_link {
+	color: #e60d0d;
+	border-bottom: 1px solid #e60d0d;
+	padding: 10px 0;
+	display: block;
+	font-size: 18px;
+	transition: 0.5s;
+}
+.underline_link:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #e60d0d;
+	padding-left: 10px;
+}
+
+
+/* HEADER */
+
+
+.header_area{
+	color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	top: 0;
+}
+.header_area2{
+	color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	top: 0;
+	background-color:black;
+}
+.header_area__scroll{
+	color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	background-color: black;
+	top: 0;
+}
+.header{}
+.logo{
+	float: left;
+}
+.logo img{}
+.content{
+	float: left;
+}
+
+.content{}
+.content ul {
+	list-style: none;
+}
+.content ul li {
+	display: inline-block;
+	padding: 15px 42px;
+}
+.content ul li a{
+	color: white;
+}
+.content ul li a.active{
+   color: #e60d0d !important; 
+}
+.link {
+	background-color: green;
+	text-transform: capitalize;
+	display: inline-block;
+	padding: 10px 20px;
+	margin-left: 21px;
+	color: white;
+}
+.link:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #036803;
+}
+.content a i.fas {
+	margin: 5px;
+}
+/*.current{
+	background-color:red;
+	color:green;
+}*/
+
+
+/* BANNER */
+.banner_area1{
+	background-image: url("../img/banner4.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+}
+.banner_area1::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}
+.banner_area2 {
+	background-image: url("../img/banner2.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+}
+.banner_area2::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}
+.banner_area3 {
+	background-image: url("../img/banner3.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+}
+.banner_area3::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}
+.banner {
+	width: 100%;
+	padding: 200px 0;
+	text-align: center;
+	font-weight: 400;
+}
+.single_banner{}
+.single_banner h1 {
+	font-size: 75px;
+	color: white;
+	text-transform: capitalize;
+	font-weight: 400;
+}
+.single_banner a{}
+
+
+/*===============================================================================
+							SINGLE ITEM LINK
+================================================================================*/
+
+
+.all_item_link {
+	padding: 100px 60px;
+}
+.single_item_link {
+	border: 1px solid #d1cbcb;
+	min-height: 340px;
+}
+.single_item_link:nth-child(1) {
+	padding: 45px 20px;
+}
+.single_item_link h2 {
+	width: 60%;
+	font-weight: 400;
+	font-size: 27px;
+}
+.single_item_link p{}
+.single_item_link a{}
+.underline_link i.fas {
+	margin-right: 5px;
+	color: red;
+	position: unset;
+	font-size: 19px;
+}
+.underline_link:hover i.fas{
+	color: white;
+}
+.single_item_link .box_bttn {
+	border-radius: 10px;
+	width: 160px;
+	text-align: center;
+	margin-left: 0;
+	margin-bottom: 0px;
+}
+.single_item_link .link {
+	margin-left: 0;
+	border: 1px;
+	padding: 10px 26px;
+}
+.single_item_link i {
+	color: #a49c9c;
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	font-size: 30px;
+}
+.single_item_link .link {
+	margin-top: 30px;
+	padding: 14px 43px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+
+/*WHO CAN GIVE BLOOD STARTED*/
+
+.who_can_donate_area{}
+.who_can_donate{}
+.who_can_donate h2 {
+	text-transform: capitalize;
+	font-size: 47px;
+	margin-bottom: 60px;
+	position: relative;
+}
+.who_can_donate h2::before {
+	position: absolute;
+	content: "";
+	width: 250px;
+	height: 2px;
+	background-color: #e60d0d;
+	bottom: -5px;
+	left: 50%;
+	margin-left: -125px;
+}
+.who_can_donate h2::after {
+	position: absolute;
+	content: "";
+	width: 14px;
+	height: 14px;
+	background-color: #e60d0d;
+	bottom: -11px;
+	left: 50%;
+	margin-left: -7px;
+	border-radius: 20px;
+}
+.who_can_img{}
+.who_can_img img {
+	width: 100%;
+}
+
+.single_who_can {
+	padding: 0 50px;
+}
+.single_who_can h3{}
+.single_who_can p{
+	color: #5a5555;
+	font-size: 16px;
+}
+.single_who_can ul {
+	margin-left: 14px;
+	color: #5a5555;
+	font-size: 16px;
+}
+.single_who_can ul li{}
+
+
+/*ACHIEVEMENT*/
+
+.achievement_area {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+	background-color: maroon;
+}
+.achievement {
+	margin: 120px 0;
+}
+.single_achievement {
+	margin: -15px;
+	padding: 80px 0;
+}
+.single_achievement i {
+	color: white;
+	font-size: 50px;
+	width: 100%;
+}
+.single_achievement span {
+	color: white;
+	font-size: 52px;
+	font-weight: 600;
+}
+.single_achievement p {
+	color: white;
+	margin-top: -12px;
+	font-size: 18px;
+}
+.back_c_marron{
+	background-color: #6f0606;
+}
+.back_c_soft_marron {
+	background-color: #7d0707;
+}
+
+/*JOINING AREA STARTED*/
+
+
+.joining_area{}
+.joining {
+	padding: 120px 0;
+}
+.joining h2 {
+	width: 100%;
+	font-size: 39px;
+	text-transform: capitalize;
+}
+.joining p {
+	padding: 0 100px;
+	color: #605e5e;
+	margin: 8px;
+}
+.joining a {
+	margin: 0 auto;
+	margin-top: 25px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 23px;
+}
+
+
+/*CONTACT AREA STARTED*/
+.contact_top {
+	background-color: #e4e3e3;
+	height: 300px;
+}
+.contact_bottom{
+	position: relative;
+}
+.contact_adress{}
+.contact_adress h2 {
+	text-transform: capitalize;
+	font-size: 38px;
+	margin-left: 140px;
+}
+.contact_adress ul {
+	list-style: none;
+	margin-left: 140px;
+}
+.contact_adress ul li {
+	padding: 16px 0;
+	position: relative;
+	padding-left: 49px;
+}
+.contact_adress ul li a {
+	color: black;
+}
+.contact_adress ul li a i {
+	position: absolute;
+	width: 40px;
+	background-color: #c6c1c1;
+	height: 40px;
+	text-align: center;
+	border-radius: 45px;
+	padding: 12px;
+	top: 8px;
+	left: 0;
+	color: #e60d0d;
+}
+.contact_form {
+	background-color: #abb0af;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	content: "";
+	top: -240px;
+}
+.contact_form h2 {
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 26px 0;
+}
+.contact_form form {
+	padding: 30px 20px 50px 20px;
+}
+.contact_form form input[type="text"] {
+	width: 49%;
+	padding: 12px;
+	text-transform: capitalize;
+	border: 1px;
+}
+.contact_form form input[type="email"] {
+	width: 49%;
+	padding: 12px;
+	text-transform: capitalize;
+	margin-left: 6px;
+	border: 1px;
+}
+.contact_form form textarea {
+	margin-top: 12px;
+	width: 100%;
+	padding: 10px;
+	border: 1px;
+}
+.contact_form form input[type="submit"] {
+	border: 1px;
+	margin: 26px auto 0 auto;
+	display: block;
+}
+
+
+
+/*FOOTER AREA STARTED*/
+
+.footer_area {
+	background: black;
+}
+.footer {
+	color: white;
+	padding: 60px 0;
+}
+.footer h3 {
+	font-size: 36px;
+	text-transform: uppercase;
+}
+.footer_link {
+	margin: 0 auto;
+	display: block;
+}
+.footer_link i.fab {
+	font-size: 19px;
+	margin: 0 5px;
+	border: 1px solid white;
+	padding: 12px;
+	width: 45px;
+	border-radius: 45px;
+}
+.footer_link i.fab:hover {
+	color: #e60d0d;
+	border: 1px solid #e60d0d;
+}
+.footer p {
+	text-transform: capitalize;
+	margin-top: 10px;
+}
+
+
+
+/*===================================================================
+                               REGESTER
+====================================================================*/
+
+
+.register {
+	margin-top: 60px;
+}
+.register_left img {
+	margin: 220px 96px;
+}
+.register_right {
+	padding: 50px 70px 50px 0;
+}
+.register h2 {
+	font-size: 50px;
+	color: #cb4242;
+	padding-bottom: 15px;
+}
+.form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
+	width: 49%;
+	float: left;
+	margin-right: 20px;
+	padding: 10px;
+	text-transform: capitalize;
+	border: 1px solid #f0aea2;
+	color: #080808;
+}
+.form-group input[type="text"]:nth-child(2), .form-group input[type="int"] {
+	width: 48%;
+	float: left;
+	padding: 10px;
+	text-transform: capitalize;
+	border: 1px solid #f0aea2;
+}
+.form-group input[type="email"], .form-group input[type="tel"], .form-group input[type="password"] {
+	width: 100%;
+	text-transform: capitalize;
+	padding: 10px;
+	margin-top: 20px;
+	border: 1px solid #f0aea2;
+}
+.division {
+	margin: 20px 0 0 0;
+}
+.division select {
+	width: 90%;
+	margin-left: 5px;
+	padding: 10px;
+	border: 1px solid #f0aea2;
+	color: #777;
+}
+#birthdate {
+	color: #777;
+}
+.form-group label {
+	text-transform: capitalize;
+	margin-top: 10px;
+}
+.blood_group {
+	width: 49%;
+	float: left;
+	margin-bottom: 15px;
+}
+.blood_group select {
+	width: 100%;
+	padding: 11px;
+	border: 1px solid #f0aea2;
+	color: #777
+}
+.radio_input_status span, .radio_input_gender span {
+	margin-right: 20px;
+	text-transform: capitalize;
+	color: black;
+	margin-left: 5px;
+}
+.radio_input_status {
+	width: 51%;
+	float: left;
+}
+.radio_input_status label {
+	display: block;
+	overflow: hidden;
+	padding-left: 20px;
+	padding-bottom: 15px;
+}
+.radio_input_gender {
+	width: 100%;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+#status_yes {
+	margin-left: 20px;
+}
+.donate_last_date {
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+	display: none;
+}
+.donate_last_date label {
+	float: left;
+}
+.donate_last_date input[type="date"] {
+	width: 100%;
+	color: #777;
+}
+.form-group p {
+	font-size: 13px;
+	color: #777;
+	margin-top: 20px;
+}
+.form-group input[type="submit"] {
+	padding: 4px 40px;
+	text-transform: capitalize;
+	font-size: 18px;
+	margin-top: 20px;
+}
