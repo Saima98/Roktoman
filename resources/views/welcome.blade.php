@@ -33,6 +33,12 @@
         <div class="btn btn-secondary float-right" style="margin: 6px">
             <a href="/donate" style="color: white"> Search </a>
         </div>
+        <div class="btn btn-secondary float-right" style="margin: 6px">
+            <a href="/home" style="color: white"> Home </a>
+        </div>
+        <div class="btn btn-secondary float-right" style="margin: 6px">
+            <a href="/register" style="color: white"> Signup </a>
+        </div>
     </div>
     <!--
         <div id="bodyMain" style=" height:80%; background-color: white; margin: 10px; opacity: 0.5">
