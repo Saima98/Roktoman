@@ -534,6 +534,9 @@ span{
 	margin-top: 20px;
 	border: 1px solid #f0aea2;
 }
+.form-group input[type="email"]{
+	text-transform: unset;
+}
 .division {
 	margin: 20px 0 0 0;
 }
