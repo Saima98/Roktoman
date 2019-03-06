@@ -24,3 +24,14 @@ $(window).scroll(function() {
 		$(".header_area").removeClass("header_area2");
 	}
 });
+//ever donate poll
+$(document).ready(function(){
+			  $("#status_yes").click(function(){
+				$(".donate_last_date").slideDown("slow");
+			  });
+			});
+			$(document).ready(function(){
+			  $("#status_no").click(function(){
+				$(".donate_last_date").slideUp("slow");
+			  });
+			});

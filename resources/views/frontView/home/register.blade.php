@@ -88,4 +88,16 @@
 		<script src="assets/js/wow.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $("#status_yes").click(function(){
+				$(".donate_last_date").slideDown("slow");
+			  });
+			});
+			$(document).ready(function(){
+			  $("#status_no").click(function(){
+				$(".donate_last_date").slideUp("slow");
+			  });
+			});
+		</script>
 @endsection
