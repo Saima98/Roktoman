@@ -197,10 +197,12 @@
 						<div class="col-6">
 							<div class="contact_form">
 								<h2>Send any message</h2>
-								<form action="#">
-									<input type="text" name="name" placeholder="name" required>
-									<input type="email" name="email" placeholder="email" required>
-									<textarea name="message" placeholder="Message" required></textarea>
+								<form action="{{action('MessageController@insert')}}" method="post" enctype="multipart/form-data">
+								<!--{{ csrf_field() }}-->
+								@csrf
+								<input type="text" name="name" placeholder="name" required>
+									<input id="email" type="email" name="email" placeholder="email" required>
+									<textarea id="message" name="message" placeholder="Message" required></textarea>
 									<input class="box_bttn" type="submit" value="send message">
 								</form>
 							</div>
