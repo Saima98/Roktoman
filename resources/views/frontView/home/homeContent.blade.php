@@ -15,8 +15,8 @@
 				<div class="banner container-fluid">
 					<div class="single_banner">
 						<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
-						<a href="#" class="box_bttn">regestration now</a>
-						<a href="#" class="border_bttn">sign up</a>
+						<a href="/register" class="box_bttn">Registration now</a>
+						<a href="/register" class="border_bttn">sign up</a>
 						<a href="#" class="box_bttn">search for blood</a>
 					</div>
 				</div>

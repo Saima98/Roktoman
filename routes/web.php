@@ -23,4 +23,7 @@ Route::get('/home','FrontController@index');
 //register root
 Route::get('/register','RegisterController@register');
 //Register data to DB
-Route::get('/newregistration','RegisterController@insert');
+Route::POST('newregistration','RegisterController@insert');
+//
+//Route::get('newregistration','FrontController@index');
+

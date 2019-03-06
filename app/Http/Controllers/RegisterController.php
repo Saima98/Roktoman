@@ -20,9 +20,10 @@ class RegisterController extends Controller
       $weight = $request->input('weight');
       $number = $request->input('phone');
       $DOB = $request->input('DOB');
-      $lastdonate = $request->input('surname'); // This one waits
-      $bloodgroup = $request->input('surname'); // This one waits
+      $lastdonate = $request->input('lastdonate'); // This one waits
+      $bloodgroup = $request->input('bloodgroup'); // This one waits
       
+      return $division;
 /*      DB::insert('insert into student (name) values(?)',[$name]);
       echo "Record inserted successfully.<br/>";
       echo '<a href = "/insert">Click Here</a> to go back.';*/

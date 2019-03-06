@@ -19,6 +19,8 @@
 						<h2>Create a account</h2>
 					</div>
 					<form action="/newregistration" method="post">
+						<!-- {{ csrf_token() }} -->
+
 						<div class="form-group">
 							<input type="text" name="firstname" placeholder="first name" required>
 							<input type="text" name="surname" placeholder="surname" required>
@@ -46,7 +48,7 @@
 							<input type="int" name="weight" placeholder="weight" required>
 							<div class="blood_group">
 								<label for="bloodGroup">blood group:</label>
-								<select class="" id="" required>
+								<select class="" id="" name="bloodgroup" required>
 									<option>A+</option>
 									<option>B+</option>
 									<option>O+</option>
@@ -64,7 +66,7 @@
 							</div>
 							<div class="donate_last_date">
 								<label class="lastTimeDonate">donate last time :</label>
-								<input type="date" class="" id="last_donate" required>
+								<input type="date" class="" id="last_donate" name="lastdonate">
 							</div>
 							<div class="radio_input_gender">
 								<input type="radio" name="gender" value="male" required><span>male</span>
@@ -72,7 +74,7 @@
 								<input type="radio" name="gender" value="other" required><span>other</span>
 							</div>
 							<p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
-							<input class="btn btn-danger" type="submit" value="sign up">
+							<input type="submit" class="btn btn-danger" value="sign up">
 						</div>
 						</div>
 					</form>
