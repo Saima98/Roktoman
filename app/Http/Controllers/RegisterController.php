@@ -15,17 +15,22 @@ class RegisterController extends Controller
       $lastname = $request->input('surname');
       $email = $request->input('email');
       $password = $request->input('password');
-      $division = $request->input('division');
-      $gender = $request->input('surname'); // This one waits
+      $division = $request->division;
+      //$gender = $request->input('surname'); // This one waits
       $weight = $request->input('weight');
       $number = $request->input('phone');
       $DOB = $request->input('DOB');
-      $lastdonate = $request->input('lastdonate'); // This one waits
-      $bloodgroup = $request->input('bloodgroup'); // This one waits
+      //$lastdonate = $request->input('lastdonate'); // This one waits
+      $bloodgroup = $request->bloodgroup;
+      //$gender = Input::get(gender);
+      $gender=$request->gender; // This one waits
       
-      return $division;
-/*      DB::insert('insert into student (name) values(?)',[$name]);
+      //return $division;
+      //DB::insert('insert into student (name) values(?)',[$name]);
+      \DB::table('users')->insert([
+    	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
+	]);
       echo "Record inserted successfully.<br/>";
-      echo '<a href = "/insert">Click Here</a> to go back.';*/
+      echo '<a href = "/insert">Click Here</a> to go back.';
    }
 }
