@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-3">
 							<div class="single_item_link first_col">
-								<h2>who can give blood</h2>
+								<h2>Who Can Give Blood</h2>
 								<p>Most people can give blood, if they are fit and healthy</p>
 								<a class="underline_link" href="#"><i class="fas fa-angle-double-right"></i>Check you can give</a>
 							</div>
@@ -43,7 +43,7 @@
 						</div>
 						<div class="col-3">
 							<div class="single_item_link">
-								<h2>Already a donor?</h2>
+								<h2>Already a Donor?</h2>
 								<i class="fas fa-user-plus"></i>
 								<p>Sign up for an online account to manage appointments</p>
 								<a class="box_bttn" href="#">sgin up</a>
@@ -197,7 +197,9 @@
 						<div class="col-6">
 							<div class="contact_form">
 								<h2>Send any message</h2>
-								<form action="{{action('MessageController@insert')}}" method="post" enctype="multipart/form-data">
+								<form action="/passmessage" method="post" enctype="multipart/form-data"> <!-- Changed From Rafat's End --> 
+								<!--<form action="{{action('MessageController@insert')}}" method="post" enctype="multipart/form-data"> -->
+									<!-- Above Line Was From Saima's End Which Is Changed -->
 								<!--{{ csrf_field() }}-->
 								@csrf
 								<input type="text" name="name" placeholder="name" required>

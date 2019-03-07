@@ -24,6 +24,8 @@ Route::get('/home','FrontController@index');
 Route::get('/register','RegisterController@register');
 //Register data to DB
 Route::POST('newregistration','RegisterController@insert');
+
+Route::POST('passmessage','MessageController@insert');
 //
 //Route::get('newregistration','FrontController@index');
 
