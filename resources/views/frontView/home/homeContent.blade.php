@@ -30,7 +30,7 @@
 							<div class="single_item_link first_col">
 								<h2>Who Can Give Blood</h2>
 								<p>Most people can give blood, if they are fit and healthy</p>
-								<a class="underline_link" href="#"><i class="fas fa-angle-double-right"></i>Check you can give</a>
+								<a class="underline_link" href="#who_can_give"><i class="fas fa-angle-double-right"></i>Check you can give</a>
 							</div>
 						</div>
 						<div class="col-3">
@@ -38,7 +38,7 @@
 								<h2>Become a blood donor</h2>
 								<i class="far fa-check-circle"></i>
 								<p>If you are completely new to blood donation</p>
-								<a class="box_bttn" href="#">register now</a>
+								<a class="box_bttn" href="/register">register now</a>
 							</div>
 						</div>
 						<div class="col-3">
@@ -46,7 +46,7 @@
 								<h2>Already a Donor?</h2>
 								<i class="fas fa-user-plus"></i>
 								<p>Sign up for an online account to manage appointments</p>
-								<a class="box_bttn" href="#">sgin up</a>
+								<a class="box_bttn" href="/register">sign up</a>
 							</div>
 						</div>
 						<div class="col-3">

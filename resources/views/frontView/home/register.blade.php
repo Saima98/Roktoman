@@ -16,7 +16,7 @@
 				</div>
 				<div class="col-7 register_right">
 					<div class="heading">
-						<h2>Create a account</h2>
+						<h2>Create an account</h2>
 					</div>
 					<form action="/newregistration" method="post">
 						<!-- {{ csrf_token() }} -->
