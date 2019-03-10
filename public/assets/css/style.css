@@ -613,3 +613,67 @@ span{
 	font-size: 18px;
 	margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+/*=======================================================
+                    LOG IN
+========================================================*/
+
+
+.login_area{
+	background-image: linear-gradient(to right, black, #e60d0d);
+}
+.login {
+	background-color: white;
+	margin: 100px 0;
+	padding: 60px 0;
+}
+.login h1 {
+	text-transform: capitalize;
+	color: black;
+	padding: 20px;
+	font-size: 44px;
+}
+.login form{
+	padding: 20px;
+}
+.login form input[type="email"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 18px;
+	border: 1px solid black;
+}
+.login form input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	text-transform: capitalize;
+	margin-bottom: 18px;
+	border: 1px solid black;
+}
+.login form input[type="submit"] {
+	display: block;
+	background-color: #e60d0d;
+	border: 1px;
+	padding: 10px 30px;
+	color: white;
+	text-transform: capitalize;
+	font-size: 17px;
+}
+.login form a {
+	display: inline-block;
+	float: right;
+	margin-top: -48px;
+	color: black;
+}
+.login form a:hover {
+	color: #e60d0d;
+	text-decoration: none;
+	
+}
