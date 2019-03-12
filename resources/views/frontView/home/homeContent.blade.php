@@ -46,11 +46,7 @@
 								<h2>Already a Donor?</h2>
 								<i class="fas fa-user-plus"></i>
 								<p>Sign up for an online account to manage appointments</p>
-<<<<<<< HEAD
-								<a class="box_bttn" href="/register">sgin up</a>
-=======
 								<a class="box_bttn" href="/register">sign up</a>
->>>>>>> 5a8e2bcf8373bb23d98e465119387d7c7ce3ebb0
 							</div>
 						</div>
 						<div class="col-3">
