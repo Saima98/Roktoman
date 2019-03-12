@@ -510,6 +510,7 @@ span{
 	font-size: 50px;
 	color: #cb4242;
 	padding-bottom: 15px;
+	text-transform: capitalize;
 }
 .form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
 	width: 49%;
@@ -625,7 +626,7 @@ span{
 /*=======================================================
                     LOG IN
 ========================================================*/
-
+/*
 
 .login_area{
 	background-image: linear-gradient(to right, black, #e60d0d);
@@ -676,4 +677,24 @@ span{
 	color: #e60d0d;
 	text-decoration: none;
 	
+}*/
+
+
+
+
+.login_left img {
+	margin: 20px 96px;
+}
+.login_right {
+	padding: 100px 80px;
+}
+.login_right form .form-group a {
+	text-decoration: none;
+	float: right;
+	margin: 16px 0;
+	text-transform: capitalize;
+	color: #e60d0d;
+}
+.login_right form .form-group a:hover {
+	color: black;
 }
