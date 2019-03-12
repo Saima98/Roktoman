@@ -19,7 +19,7 @@
 								</ul>
 							</div>
 							<div class="menu_link">
-								<a href="#" class="link">sign in <i class="fas fa-portrait"></i></a>
+								<a href="/login" class="link">sign in <i class="fas fa-portrait"></i></a>
 							</div>
 						</div>
 					</div>

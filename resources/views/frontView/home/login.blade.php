@@ -22,7 +22,7 @@
 						<div class="form-group">
 							<input type="email" name="email" placeholder="email address" required>
 							<input type="password" name="password" placeholder="new password" required>
-							<input class="btn btn-danger" type="submit" value="sign up">
+							<input class="btn btn-danger" type="submit" value="log in">
 							<a href="#">forget password ?</a>
 						</div>
 					</form>
