@@ -29,3 +29,6 @@ Route::POST('passmessage','MessageController@insert');
 //
 //Route::get('newregistration','FrontController@index');
 
+
+//login root
+Route::get('/login','LoginController@login');

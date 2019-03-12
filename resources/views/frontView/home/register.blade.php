@@ -11,12 +11,12 @@
 @section('home_body')
 		<section class="register_area container-fluid">
 			<div class="register row">
-				<div class="col-5 register_left">
+				<div class="col-lg-5 register_left">
 					<img src="assets/img/inspire.jpg" alt="inspire pic" />
 				</div>
-				<div class="col-7 register_right">
+				<div class="col-lg-7 register_right">
 					<div class="heading">
-						<h2>Create a account</h2>
+						<h2>Create an account</h2>
 					</div>
 					<form action="/newregistration" method="post">
 						<!-- {{ csrf_token() }} -->

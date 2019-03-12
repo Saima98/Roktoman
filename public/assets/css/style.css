@@ -61,7 +61,82 @@ span{
 /* HEADER */
 
 
+
 .header_area{
+	color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	top: 0;
+}
+.header_area2{
+	color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	top: 0;
+	background-color:black;
+}
+.header_area__scroll{
+	color: white;
+	width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	background-color: black;
+	top: 0;
+}
+.header{}
+.logo{
+	float: left;
+}
+.logo img{}
+.content{
+	float: left;
+}
+
+
+
+
+.content{}
+.menu {
+	padding: 22px 0;
+}
+.menu ul {
+	list-style: none;
+}
+.menu ul li {
+	display: inline-block;
+	padding: 0 42px;
+}
+.menu ul li a{
+	color: white;
+}
+.menu ul li a.active{
+   color: #e60d0d !important; 
+}
+.link {
+	background-color: green;
+	text-transform: capitalize;
+	display: inline-block;
+	padding: 10px 20px;
+	margin-left: 21px;
+	color: white;
+}
+.link:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #036803;
+}
+/*.content a i.fas {
+	margin: 5px;
+}*/
+.menu_link {
+	margin-top: 12px;
+}
+.menu_link a{}
+.menu_link a i{}
+
+/*.header_area{
 	color: white;
 	width: 100%;
 	position: fixed;
@@ -510,6 +585,7 @@ span{
 	font-size: 50px;
 	color: #cb4242;
 	padding-bottom: 15px;
+	text-transform: capitalize;
 }
 .form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
 	width: 49%;
@@ -612,4 +688,88 @@ span{
 	text-transform: capitalize;
 	font-size: 18px;
 	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*=======================================================
+                    LOG IN
+========================================================*/
+/*
+
+.login_area{
+	background-image: linear-gradient(to right, black, #e60d0d);
+}
+.login {
+	background-color: white;
+	margin: 100px 0;
+	padding: 60px 0;
+}
+.login h1 {
+	text-transform: capitalize;
+	color: black;
+	padding: 20px;
+	font-size: 44px;
+}
+.login form{
+	padding: 20px;
+}
+.login form input[type="email"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 18px;
+	border: 1px solid black;
+}
+.login form input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	text-transform: capitalize;
+	margin-bottom: 18px;
+	border: 1px solid black;
+}
+.login form input[type="submit"] {
+	display: block;
+	background-color: #e60d0d;
+	border: 1px;
+	padding: 10px 30px;
+	color: white;
+	text-transform: capitalize;
+	font-size: 17px;
+}
+.login form a {
+	display: inline-block;
+	float: right;
+	margin-top: -48px;
+	color: black;
+}
+.login form a:hover {
+	color: #e60d0d;
+	text-decoration: none;
+	
+}*/
+
+
+
+
+.login_left img {
+	margin: 20px 96px;
+}
+.login_right {
+	padding: 100px 80px;
+}
+.login_right form .form-group a {
+	text-decoration: none;
+	float: right;
+	margin: 16px 0;
+	text-transform: capitalize;
+	color: #e60d0d;
+}
+.login_right form .form-group a:hover {
+	color: black;
 }
