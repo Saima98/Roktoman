@@ -35,10 +35,10 @@
 						</div>
 						<div class="col-3">
 							<div class="single_item_link">
-								<h2>Become a blood donor</h2>
+								<h2>Become a Blood Donor</h2>
 								<i class="far fa-check-circle"></i>
 								<p>If you are completely new to blood donation</p>
-								<a class="box_bttn" href="#">register now</a>
+								<a class="box_bttn" href="/register">register now</a>
 							</div>
 						</div>
 						<div class="col-3">
@@ -46,12 +46,12 @@
 								<h2>Already a Donor?</h2>
 								<i class="fas fa-user-plus"></i>
 								<p>Sign up for an online account to manage appointments</p>
-								<a class="box_bttn" href="#">sgin up</a>
+								<a class="box_bttn" href="/register">sgin up</a>
 							</div>
 						</div>
 						<div class="col-3">
 							<div class="single_item_link">
-								<h2>Search for  donar</h2>
+								<h2>Search For Donor</h2>
 								<i class="fas fa-search-plus"></i>
 								<input class="link" type="submit" value="search"/>
 							</div>

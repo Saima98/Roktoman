@@ -9,7 +9,7 @@
 				<div class="col-10">
 					<div id="navbar" class="content">
 						<ul class="nav">
-							<li class="current"><a href="#home">Home</a></li>
+							<li class="current"><a href="/home">Home</a></li>
 							<li class="current"><a href="#why_give">Why Give Blood</a></li>
 							<li class="current"><a href="#who_can_give">Who Can Give Blood</a></li>
 							<li class="current"><a href="#achievement">Achievement</a></li>
