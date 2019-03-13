@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->integer('weight');
             $table->integer('number');
             $table->date('DOB');
-            $table->date('lastdonate');
+            $table->date('lastdonate')->nullable();;
             $table->string('bloodgroup');
             $table->rememberToken();
             $table->timestamps();

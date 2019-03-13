@@ -16,19 +16,17 @@ class RegisterController extends Controller
       $email = $request->input('email');
       $password = $request->input('password');
       $division = $request->division;
-      //$gender = $request->input('surname'); // This one waits
       $weight = $request->input('weight');
       $number = $request->input('phone');
       $DOB = $request->input('DOB');
-      //$lastdonate = $request->input('lastdonate'); // This one waits
       $bloodgroup = $request->bloodgroup;
-      //$gender = Input::get(gender);
-      $gender=$request->gender; // This one waits
-      
-      //return $division;
-      //DB::insert('insert into student (name) values(?)',[$name]);
+      $lastdonate=NULL;
+      $checkmark=$request->current_status;
+      if($checkmark=="yes")
+         $lastdonate=$request->input('lastdonate');
+      $gender=$request->gender;
       \DB::table('users')->insert([
-    	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
+    	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'lastdonate'=>$lastdonate, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
 	]);
       echo "Record inserted successfully.<br/>";
       echo '<a href = "/insert">Click Here</a> to go back.';

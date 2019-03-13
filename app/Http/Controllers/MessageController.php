@@ -15,7 +15,7 @@ class MessageController extends Controller
 		$message = $request->input('message');
         
 		
-		\DB::table('ussers_message')->insert([
+		\DB::table('comments')->insert([
     	['name'=>$name, 'email'=>$email, 'message'=>$message]
 	]);
       echo "Record inserted successfully.<br/>";
