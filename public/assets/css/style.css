@@ -773,3 +773,46 @@ span{
 .login_right form .form-group a:hover {
 	color: black;
 }
+
+
+/*=========================================
+			SEARCH PAGE STARTED
+=========================================*/
+
+
+.search_left img {
+	margin: 54px 96px;
+}
+.search_right {
+	padding: 100px 80px;
+}
+.search_right .form-group input[type="text"]{
+	width: 100%;
+	float: left;
+	margin-right: 20px;
+	padding: 10px;
+	text-transform: capitalize;
+	border: 1px solid #f0aea2;
+	color: #080808;
+}
+.search_right .blood_group select {
+	width: 100%;
+	padding: 11px;
+	border: 1px solid #f0aea2;
+	color: #777
+}
+.search_right .division {
+	overflow: hidden;
+	margin: 0;
+	margin-bottom: 17px;
+}
+.search_right .division select {
+	width: 96%;
+	margin-left: 13px;
+	padding: 10px;
+	border: 1px solid #f0aea2;
+	color: #777;
+}
+.form-group .division label {
+	margin-left: 13px;
+}

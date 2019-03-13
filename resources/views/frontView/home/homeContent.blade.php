@@ -17,7 +17,7 @@
 						<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
 						<a href="/register" class="box_bttn">Registration now</a>
 						<a href="/register" class="border_bttn">sign up</a>
-						<a href="#" class="box_bttn">search for blood</a>
+						<a href="/search" class="box_bttn">search for blood</a>
 					</div>
 				</div>
 			</div>
@@ -53,7 +53,8 @@
 							<div class="single_item_link">
 								<h2>Search For Donor</h2>
 								<i class="fas fa-search-plus"></i>
-								<input class="link" type="submit" value="search"/>
+								<!--<input class="link" type="submit" value="search"/>-->
+								<a class="link" href="/search">search</a>
 							</div>
 						</div>
 					</div>

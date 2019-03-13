@@ -32,3 +32,6 @@ Route::POST('passmessage','MessageController@insert');
 
 //login root
 Route::get('/login','LoginController@login');
+
+//search root
+Route::get('/search','SearchController@search');
