@@ -1,12 +1,12 @@
 	<div class="header">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-md-1 col-sm-1">
 					<div class="logo">
 						<a href="#home"><span>rokto</span>man</a>
 					</div>
 				</div>
-				<div class="col-lg-10">
+				<div class="col-lg-10 col-md-11 col-sm-11">
 					<div id="navbar" class="content">
 						<div class="row">
 							<div class="menu">

@@ -110,6 +110,7 @@ span{
 }
 .menu ul li a{
 	color: white;
+	text-transform: capitalize;
 }
 .menu ul li a.active{
    color: #e60d0d !important; 
@@ -813,6 +814,6 @@ span{
 	border: 1px solid #f0aea2;
 	color: #777;
 }
-.form-group .division label {
+.search_right.form-group .division label {
 	margin-left: 13px;
 }

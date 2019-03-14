@@ -1,0 +1,401 @@
+/* XL Device :1200px. 1170px */
+@media (min-width: 1200px) and (max-width: 1500px) {
+ 
+}
+/* Medium Layout: 970px.  */
+ 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	/*HOME*/
+	
+	
+	.menu ul li {
+		padding: 0 19px;
+	}
+	.menu_link {
+		margin-left: 0;
+	}
+	.single_item_link {
+		min-height: 284px;
+	}
+	.single_item_link:nth-child(1) {
+		padding: 10px 11px;
+	}
+	.single_item_link h2 {
+		font-size: 24px;
+	}
+	.underline_link {
+		font-size: 16px;
+	}
+	.underline_link:hover {
+		padding-left: 5px;
+	}
+	.single_item_link .box_bttn {
+		border-radius: 14px;
+		width: 153px;
+		padding: 9px 0;
+	}
+	.single_item_link .link {
+		padding: 9px 43px;
+		font-size: 19px;
+		border-radius: 14px;
+	}
+	.single_who_can {
+		padding: 0 20px;
+	}
+	.contact_adress h2 {
+		margin-left: 64px;
+	}
+	.contact_adress ul {
+		margin-left: 64px;
+	}
+	.contact_form {
+		right: 46px;
+		width: 90%;
+	}
+	.contact_form form input[type="email"] {
+		width: 48%;
+	}
+	
+	
+	
+	
+	/*REGISTER*/
+	
+	.register_right {
+		padding: 50px 70px 50px 60px;
+	}
+	.register_left img {
+		margin: 280px 55px;
+	}
+	.form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.form-group input[type="text"]:nth-child(2), .form-group input[type="int"] {
+		width: 100%;
+		
+		margin-top: 20px;
+	}
+	.division select {
+		width: 100%;
+		margin-left: 0;
+	}
+	.blood_group {
+		width: 100%;
+	}
+	.radio_input_status {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.radio_input_status label {
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	#status_yes {
+		margin-left: 0;
+	}
+	
+
+
+	/*LOG IN*/
+	
+	.login_left img {
+		margin: 20px 55px;
+	}
+	
+	
+	/*SEARCH*/
+
+	.search_left img {
+		margin: 54px 61px;
+	}
+	
+}
+
+
+
+
+
+/* Tablet Layout: 768px.  750px*/
+ 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.menu {
+		margin-left: 20px;
+	}
+	.menu ul li {
+		padding: 0 13px;
+	}
+	.menu_link {
+		margin-left: 0;
+	}
+	
+	
+	
+	/*HOME*/
+	
+	
+	.all_item_link {
+		padding: 100px 60px 0 60px;
+	}
+	.single_item_link {
+	margin-bottom: 30px;
+}
+.single_who_can {
+	padding: 38px 23px;
+}
+.contact_adress h2 {
+	margin-left: 0;
+}
+.contact_adress ul {
+	margin-left: 0;
+}
+.contact_form h2 {
+	padding: 15px 0;
+	font-size: 28px;
+}
+.contact_form form input[type="text"] {
+	width: 100%;
+}
+.contact_form form input[type="email"] {
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 0;
+}
+	
+	
+	
+	/*REGISTER*/
+	
+	.register_left img {
+		margin: 449px 11px;
+	}
+	.form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.form-group input[type="text"]:nth-child(2), .form-group input[type="int"] {
+		width: 100%;
+		margin-top:0;
+	}
+	.division select {
+		width: 100%;
+		margin-left: 0;
+	}
+	.blood_group {
+		width: 100%;
+	}
+	.radio_input_status {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.radio_input_status label {
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	#status_yes {
+		margin-left: 0;
+	}
+	.division {
+		margin: 0;
+	}
+	.radio_input_gender {
+		margin-bottom: 0;
+	}	
+	
+
+
+	/*LOG IN*/
+	
+	.login_left img {
+		margin: 20px 10px;
+	}
+	.login_right {
+		padding: 100px 35px 100px 0;
+	}
+	
+	
+	/*SEARCH*/
+	
+	.search_right {
+		padding: 100px 39px 100px 0;
+	}
+	.search_left img {
+		margin: 54px 8px;
+	}
+
+	
+}
+
+
+
+/* Wide Mobile Layout: 480px. */
+ 
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.logo {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	.menu ul li {
+		padding: 0 5px;
+		font-size: 16px;
+	}
+	.menu_link {
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	
+	
+	
+	
+	/*REGISTER*/
+	
+	.register_left {
+		display: none;
+	}
+	.register h2 {
+		text-align: center;
+	}
+	.register_right {
+		padding: 130px 40px 50px 40px;
+	}
+	.form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.form-group input[type="text"]:nth-child(2), .form-group input[type="int"] {
+		width: 100%;
+		margin-top:0;
+	}
+	.division select {
+		width: 100%;
+		margin-left: 0;
+	}
+	.blood_group {
+		width: 100%;
+	}
+	.radio_input_status {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.radio_input_status label {
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	#status_yes {
+		margin-left: 0;
+	}
+	.division {
+		margin: 0;
+	}
+	.radio_input_gender {
+		margin-bottom: 0;
+	}	
+	
+	
+	/*LOG IN*/
+	
+	.login_left {
+		display: none;
+	}
+	.login_right {
+		padding: 100px 38px;
+	}
+	
+	
+	/*SEARCH*/
+
+	.search_left {
+		display: none;
+	}
+	
+}
+
+
+
+/* Mobile Layout: 320px. */
+ 
+@media only screen and (max-width: 767px) {
+	.header_area2 {
+		position: unset;
+	}
+	.search_right {
+		padding: 100px 22px;
+	}
+	
+	
+	
+	
+	
+	/*REGISTER*/
+	
+	.register_left {
+		display: none;
+	}
+	.register h2 {
+		text-align: center;
+		font-size: 40px;
+	}
+	.register_right {
+		padding: 50px 20px 50px 020px;
+	}
+	.form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.form-group input[type="text"]:nth-child(2), .form-group input[type="int"] {
+		width: 100%;
+		margin-top:0;
+	}
+	.division select {
+		width: 100%;
+		margin-left: 0;
+	}
+	.blood_group {
+		width: 100%;
+	}
+	.radio_input_status {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.radio_input_status label {
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	#status_yes {
+		margin-left: 0;
+	}
+	.division {
+		margin: 0;
+	}
+	.radio_input_gender {
+		margin-bottom: 0;
+	}		
+	
+	
+	
+	/*LOG IN*/
+	
+	
+	.login_left {
+		display: none;
+	}
+	.login_right {
+		padding: 100px 12px;
+	}
+	
+	
+	/*SEARCH*/
+
+	.search_left {
+		display: none;
+	}
+	.search_right {
+		padding: 100px 10px;
+	}
+	
+}
