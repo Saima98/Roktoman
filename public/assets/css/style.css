@@ -814,6 +814,6 @@ span{
 	border: 1px solid #f0aea2;
 	color: #777;
 }
-.search_right .form-group .division label {
+.search_right.form-group .division label {
 	margin-left: 13px;
 }
