@@ -16,9 +16,9 @@
 					<div class="container-fluid">
 						<div class="single_banner">
 							<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
-							<a href="#" class="box_bttn">regestration now</a>
-							<a href="#" class="border_bttn">sign up</a>
-							<a href="#" class="box_bttn">search for blood</a>
+							<a href="/register" class="box_bttn">regestration now</a>
+							<a href="/register" class="border_bttn">sign up</a>
+							<a href="/search" class="box_bttn">search for blood</a>
 						</div>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 							<div class="single_item_link first_col">
 								<h2>who can give blood</h2>
 								<p>Most people can give blood, if they are fit and healthy</p>
-								<a class="underline_link" href="#"><i class="fas fa-angle-double-right"></i>Check you can give</a>
+								<a class="underline_link" href="#who_can_give"><i class="fas fa-angle-double-right"></i>Check you can give</a>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6">
@@ -40,7 +40,7 @@
 								<h2>Become a blood donor</h2>
 								<i class="far fa-check-circle"></i>
 								<p>If you are completely new to blood donation</p>
-								<a class="box_bttn" href="#">register now</a>
+								<a class="box_bttn" href="/register">register now</a>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6">
@@ -48,7 +48,7 @@
 								<h2>Already a donor?</h2>
 								<i class="fas fa-user-plus"></i>
 								<p>Sign up for an online account to manage appointments</p>
-								<a class="box_bttn" href="#">sgin up</a>
+								<a class="box_bttn" href="/register">sign up</a>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6">
@@ -56,7 +56,7 @@
 								<h2>Search for  donar</h2>
 								<i class="fas fa-search-plus"></i>
 								<!--<input class="link" type="submit" value="search"/>-->
-								<a class="link" href="#">sgin up</a>
+								<a class="link" href="/search">search</a>
 							</div>
 						</div>
 					</div>
@@ -173,7 +173,7 @@
 						<h2>become a part Of great work today</h2>
 						<p>You can give blood at any of our blood donation venues all over the world. 
 						We have total sixty thousands donor centers and visit thousands of other venues on various occasions. </p>
-						<a href="#" class="box_bttn">join with us</a>
+						<a href="/register" class="box_bttn">join with us</a>
 					</div>
 				</div>
 			</div>
