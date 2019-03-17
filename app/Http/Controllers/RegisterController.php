@@ -28,7 +28,8 @@ class RegisterController extends Controller
       \DB::table('users')->insert([
     	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'lastdonate'=>$lastdonate, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
 	]);
-      echo "Record inserted successfully.<br/>";
-      echo '<a href = "/insert">Click Here</a> to go back.';
+		//return view('users_view')
+      //echo "Record inserted successfully.<br/>";
+      //echo '<a href = "/insert">Click Here</a> to go back.';
    }
 }
