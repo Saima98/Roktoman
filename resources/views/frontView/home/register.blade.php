@@ -9,12 +9,12 @@
 @endsection
 
 @section('home_body')
-		<section class="register_area container-fluid">
+<section class="register_area container">
 			<div class="register row">
-				<div class="col-lg-5 register_left">
+				<div class="col-lg-6 col-md-6 register_left">
 					<img src="assets/img/inspire.jpg" alt="inspire pic" />
 				</div>
-				<div class="col-lg-7 register_right">
+				<div class="col-lg-6 col-md-6 register_right">
 					<div class="heading">
 						<h2>Create an account</h2>
 					</div>

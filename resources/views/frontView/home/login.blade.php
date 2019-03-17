@@ -9,12 +9,12 @@
 @endsection
 
 @section('home_body')
-		<section class="register_area container-fluid">
+		<section class="register_area container">
 			<div class="register row">
-				<div class="col-lg-5 login_left">
+				<div class="col-lg-6 col-md-6 login_left">
 					<img src="assets/img/inspire.jpg" alt="inspire pic" />
 				</div>
-				<div class="col-lg-7 login_right">
+				<div class="col-lg-6 col-md-6 login_right">
 					<div class="heading">
 						<h2>log in</h2>
 					</div>
@@ -22,7 +22,7 @@
 						<div class="form-group">
 							<input type="email" name="email" placeholder="email address" required>
 							<input type="password" name="password" placeholder="new password" required>
-							<input class="btn btn-danger" type="submit" value="log in">
+							<input class="btn btn-danger" type="submit" value="sign up">
 							<a href="#">forget password ?</a>
 						</div>
 					</form>
