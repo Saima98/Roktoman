@@ -90,14 +90,9 @@ span{
 	float: left;
 }
 .logo img{}
-.content{
-	float: left;
+.content {
+	float: right;
 }
-
-
-
-
-.content{}
 .menu {
 	padding: 22px 0;
 }
@@ -106,7 +101,7 @@ span{
 }
 .menu ul li {
 	display: inline-block;
-	padding: 0 42px;
+	padding: 0 20px;
 }
 .menu ul li a{
 	color: white;
@@ -206,14 +201,14 @@ span{
 
 
 /* BANNER */
-.banner_area1{
+.banner_area{
 	background-image: url("../img/banner4.jpg");
 	background-size: cover;
 	background-position: center;
 	position: relative;
 	z-index: 2;
 }
-.banner_area1::before {
+.banner_area::before {
 	position: absolute;
 	content: "";
 	width: 100%;
@@ -577,10 +572,10 @@ span{
 	margin-top: 60px;
 }
 .register_left img {
-	margin: 220px 96px;
+	margin: 200px 60px;
 }
 .register_right {
-	padding: 50px 70px 50px 0;
+	padding: 50px 0;
 }
 .register h2 {
 	font-size: 50px;
@@ -589,7 +584,7 @@ span{
 	text-transform: capitalize;
 }
 .form-group input[type="text"]:nth-child(1), .form-group input[type="date"] {
-	width: 49%;
+	width: 48%;
 	float: left;
 	margin-right: 20px;
 	padding: 10px;
@@ -618,8 +613,7 @@ span{
 	margin: 20px 0 0 0;
 }
 .division select {
-	width: 90%;
-	margin-left: 5px;
+	width: 100%;
 	padding: 10px;
 	border: 1px solid #f0aea2;
 	color: #777;
@@ -759,10 +753,10 @@ span{
 
 
 .login_left img {
-	margin: 20px 96px;
+	margin: 20px 60px;
 }
 .login_right {
-	padding: 100px 80px;
+	padding: 100px 0;
 }
 .login_right form .form-group a {
 	text-decoration: none;
@@ -816,4 +810,91 @@ span{
 }
 .search_right.form-group .division label {
 	margin-left: 13px;
+}
+
+
+
+/*===============================================================
+							USERS VIEW
+================================================================*/
+
+
+.text_transform_none{
+	text-transform: none;
+}
+.hello_massage {
+	margin-top: 68px;
+	padding: 40px;
+}
+.hello_massage h1 {
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 30px;
+}
+.search_view_area table tr{
+	text-transform:capitalize;
+}
+.search_view_area table tr td i.fa {
+	margin-right: 20px;
+	font-size: 19px;
+}
+.search_view_area table tr td a {
+	margin-right: 20px;
+	font-size: 19px;
+}
+.search_view_area table tr td a {
+	text-decoration: none;
+	color: black;
+	font-size: 17px;
+}
+.search_view_area table tr td a:hover {
+	color: #e60d0d;
+}
+
+
+
+/*===========================================================
+					USERS VIEW
+============================================================*/
+
+
+.users_view_area{
+	background-color: #edecec;
+}
+.users_view_left {
+	margin-top: 68px;
+}
+.users_view_left ul {
+	list-style: none;
+}
+.users_view_left ul li {
+	padding: 19px;
+	text-align: center;
+	text-transform: capitalize;
+	border-bottom: 1px solid gray;
+	margin: 0 -31px;
+}
+.users_view_left ul li:hover {
+	background-color: black;
+	color: white;
+	border: 1px solid gray;
+}
+.users_view_right{
+	background-color: white;
+	border-left: 1px solid gray;
+}
+.users_view_right table tr td {
+	padding-left: 35px;
+	text-transform: capitalize;
+}
+.users_view_right table tr td a {
+	background-color: #e60d0d;
+	color: white;
+	padding: 7px 20px;
+	text-decoration: none;
+}
+.update {}
+.update a {
+	margin-left: 35px;
+	padding: 11px 40px;
 }

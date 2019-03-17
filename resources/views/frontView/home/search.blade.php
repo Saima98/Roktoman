@@ -11,10 +11,10 @@
 @section('home_body')
 		<section class="register_area container-fluid">
 			<div class="register row">
-				<div class="col-lg-5 search_left">
+				<div class="col-lg-5 col-md-6 search_left">
 					<img src="assets/img/inspire.jpg" alt="inspire pic" />
 				</div>
-				<div class="col-lg-7 search_right">
+				<div class="col-lg-7 col-md-6 search_right">
 					<div class="heading">
 						<h2>search here</h2>
 					</div>

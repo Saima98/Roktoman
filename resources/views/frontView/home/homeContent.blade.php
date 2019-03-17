@@ -11,50 +11,52 @@
 @section('home_body')
 	<!--BANNER SECTION START-->
 		<section id="slider_banner" class="slider_banners">
-			<div id="home" class="banner_area1">
-				<div class="banner container-fluid">
-					<div class="single_banner">
-						<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
-						<a href="/register" class="box_bttn">Registration now</a>
-						<a href="/register" class="border_bttn">sign up</a>
-						<a href="/search" class="box_bttn">search for blood</a>
+			<div id="home" class="banner_area">
+				<div class="banner">
+					<div class="container-fluid">
+						<div class="single_banner">
+							<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
+							<a href="#" class="box_bttn">regestration now</a>
+							<a href="#" class="border_bttn">sign up</a>
+							<a href="#" class="box_bttn">search for blood</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="why_give" class="all_item_link_area">
 			<div class="all_item_link">
-				<div class="container-fluid">
+				<div class="container">
 					<div class="row">
-						<div class="col-3">
+						<div class="col-lg-3 col-md-6">
 							<div class="single_item_link first_col">
-								<h2>Who Can Give Blood</h2>
+								<h2>who can give blood</h2>
 								<p>Most people can give blood, if they are fit and healthy</p>
-								<a class="underline_link" href="#who_can_give"><i class="fas fa-angle-double-right"></i>Check you can give</a>
+								<a class="underline_link" href="#"><i class="fas fa-angle-double-right"></i>Check you can give</a>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-6">
 							<div class="single_item_link">
-								<h2>Become a Blood Donor</h2>
+								<h2>Become a blood donor</h2>
 								<i class="far fa-check-circle"></i>
 								<p>If you are completely new to blood donation</p>
-								<a class="box_bttn" href="/register">register now</a>
+								<a class="box_bttn" href="#">register now</a>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-6">
 							<div class="single_item_link">
-								<h2>Already a Donor?</h2>
+								<h2>Already a donor?</h2>
 								<i class="fas fa-user-plus"></i>
 								<p>Sign up for an online account to manage appointments</p>
-								<a class="box_bttn" href="/register">sign up</a>
+								<a class="box_bttn" href="#">sgin up</a>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-6">
 							<div class="single_item_link">
-								<h2>Search For Donor</h2>
+								<h2>Search for  donar</h2>
 								<i class="fas fa-search-plus"></i>
 								<!--<input class="link" type="submit" value="search"/>-->
-								<a class="link" href="/search">search</a>
+								<a class="link" href="#">sgin up</a>
 							</div>
 						</div>
 					</div>
@@ -63,19 +65,19 @@
 		</section>
 		<section id="who_can_give" class="who_can_donate_area">
 			<div class="who_can_donate ptb-100">
-				<div class="container-fluid">
+				<div class="container">
 				<h2 class="text-center">who can give blood</h2>
 					<div class="ptb-100">
 						<div class="row">
-							<div class="col-5">
+							<div class="col-lg-5">
 								<div class="who_can_img">
 									<img src="assets/img/donating_blood.jpg" alt="" />
 								</div>
 							</div>
-							<div class="col-7">
+							<div class="col-lg-7">
 								<div class="who_can_bref">
 									<div class="row">
-										<div class="col-6">
+										<div class="col-lg-6  col-sm-12">
 											<div class="single_who_can">
 												<h3>You can give blood if you:</h3>
 												<p>Most people can give blood. You can give blood if you:</p>
@@ -87,7 +89,7 @@
 												</ul>
 											</div>
 										</div>
-										<div class="col-6">
+										<div class="col-lg-6  col-sm-12">
 											<div class="single_who_can">
 												<h3>Check you are able to give blood</h3>
 												<p>The common reasons donors should check if they can give blood are:</p>
@@ -108,9 +110,9 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="who_can_bref col-7">
+						<div class="who_can_bref col-lg-7">
 							<div class="row">
-								<div class="single_who_can col-6">
+								<div class="single_who_can col-lg-6  col-sm-12">
 									<h3>Male and female donors</h3>
 									<p>Men often make ideal donors because:</p>
 									<ul>
@@ -119,42 +121,42 @@
 										<li>their platelet count is typically higher meaning they are more likely to be accepted as platelet donors.</li>
 									</ul>
 								</div>
-								<div class="single_who_can col-6">
+								<div class="single_who_can col-lg-6  col-sm-12">
 									<h3>Women under 20 - check if you can give blood</h3>
 									<p>If you are a woman under 20 and you weigh under 10st 3lb or 65kg or are under 5' 6" or 168cm tall you will need to estimate your blood volume to see if you can give blood. If your weight lies between two of the values shown, please use the nearest lower weight.</p>
 								</div>
 							</div>
 						</div>
-						<div class="who_can_img col-5">
+						<div class="who_can_img col-lg-5">
 							<img src="assets/img/blood_inside.png" alt="" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section id="achievement" class="achievement_area">
+				<section id="achievement" class="achievement_area">
 			<div class="achievement">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-3">
+						<div class="col-lg-3 col-sm-12">
 							<div class="back_c_marron single_achievement text-center">
 								<i class="fas fa-gift"></i>
 								<span class="counter">1500</span><br/><p>Success Smile</p>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-sm-6">
 							<div class="back_c_soft_marron single_achievement text-center">
 								<i class="far fa-user"></i>
 								<span class="counter">1100</span><br/><p>Happy Donors</p>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-sm-6">
 							<div class="back_c_marron single_achievement text-center">
 								<i class="far fa-smile"></i>
 								<span class="counter">2700</span><br/><p>Happy Recipient</p>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-sm-6">
 							<div class="back_c_soft_marron single_achievement text-center">
 								<i class="fas fa-award"></i>
 								<span class="counter">500</span><br/><p>Total Awards</p>
@@ -185,7 +187,7 @@
 			<div class="contact_bottom ptb-100">
 				<div class="container">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-lg-6 col-sm-12">
 							<div class="contact_adress">
 								<h2>contact us</h2>
 								<ul>
@@ -195,7 +197,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-lg-6 col-sm-12">
 							<div class="contact_form">
 								<h2>Send any message</h2>
 								<form action="/passmessage" method="post" enctype="multipart/form-data"> <!-- Changed From Rafat's End --> 
@@ -203,7 +205,7 @@
 									<!-- Above Line Was From Saima's End Which Is Changed -->
 								<!--{{ csrf_field() }}-->
 								@csrf
-								<input type="text" name="name" placeholder="name" required>
+									<input type="text" name="name" placeholder="name" required>
 									<input id="email" type="email" name="email" placeholder="email" required>
 									<textarea id="message" name="message" placeholder="Message" required></textarea>
 									<input class="box_bttn" type="submit" value="send message">

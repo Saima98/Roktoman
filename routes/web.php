@@ -35,3 +35,9 @@ Route::get('/login','LoginController@login');
 
 //search root
 Route::get('/search','SearchController@search');
+
+//search view
+Route::get('/searching_result','SearchViewController@search_view');
+
+//users view
+Route::get('/users_view','UsersViewController@users_view');
