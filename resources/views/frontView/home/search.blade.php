@@ -22,13 +22,12 @@
 					<div class="heading">
 						<h2>search here</h2>
 					</div>
-					<form action="#">
+					<form action="showSearchList" method="post">
+						@csrf
 						<div class="form-group">
-							<input type="text" name="name" placeholder="name" required>
-							<input type="email" name="email" placeholder="email address" required>
 							<div class="blood_group">
 								<label for="bloodGroup">blood group:</label>
-								<select class="" id="" required>
+								<select class="" id="" name="bloodgroup" required>
 									<option>A+</option>
 									<option>B+</option>
 									<option>O+</option>
@@ -41,7 +40,7 @@
 							</div>
 							<div class="division">
 								<label for="sel1">division:</label>
-								<select class="" id="" required>
+								<select class="" id="" name="division" required>
 									<option>Barisal </option>
 									<option>Chittagong </option>
 									<option>Dhaka </option>

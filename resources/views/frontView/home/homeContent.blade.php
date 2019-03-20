@@ -33,7 +33,7 @@
 							<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
 							<a href="#" class="box_bttn">registration now</a>
 							<a href="#" class="border_bttn">sign up</a>
-							<a href="#" class="box_bttn">search for blood</a>
+							<a href="search" class="box_bttn">search for blood</a>
 						</div>
 					</div>
 				</div>
