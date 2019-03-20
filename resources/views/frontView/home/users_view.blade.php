@@ -1,3 +1,19 @@
+<?php
+use Illuminate\Http\Request;
+	$fname=session()->get('fname');
+	$lname=session()->get('lname');
+	$DOB=session()->get('DOB');
+	$weight=session()->get('weight');
+	$division=session()->get('division');
+	$email=session()->get('email');
+	$lastdonate=session()->get('lastdonate');
+	$number=session()->get('number');
+	$bloodgroup=session()->get('bloodgroup');
+	$gender=session()->get('gender');
+	if($lastdonate==NULL)
+		$lastdonate="N/A";
+?>
+
 @extends('frontView.master')
 
 @section('title_area')
@@ -23,48 +39,44 @@
 					<div class="col-9">
 						<div class="users_view_right">
 							<div class="hello_massage">
-								<h1>hello user !</h1>
+								<h1>hello {{$fname.' '.$lname}}!</h1>
 							</div>
 							<table class="table table-striped">
 								<tr>
 									<td>name</td>
-									<td>anni roy</td>
+									<td>{{$fname.' '.$lname}} </td>
 								</tr>
 								<tr>
 									<td>email</td>
-									<td>chunni@gmail.com</td>
+									<td>{{$email}}</td>
 								</tr>
 								<tr>
 									<td>phone number</td>
-									<td>01742042042</td>
-								</tr>
-								<tr>
-									<td>password</td>
-									<td class="text_transform_none">anni akta bhalo meye</td>
+									<td>{{$number}}</td>
 								</tr>
 								<tr>
 									<td>division</td>
-									<td>sylhet</td>
+									<td>{{$division}}</td>
 								</tr>
 								<tr>
 									<td>birthday</td>
-									<td>01-01-20</td>
+									<td>{{$DOB}}</td>
 								</tr>
 								<tr>
 									<td>weigth</td>
-									<td>20kg</td>
+									<td>{{$weight}}</td>
 								</tr>
 								<tr>
 									<td>blood group</td>
-									<td>b-</td>
+									<td>{{$bloodgroup}}</td>
 								</tr>
 								<tr>
 									<td>last donation date</td>
-									<td>20-20-20</td>
+									<td>{{$lastdonate}}</td>
 								</tr>
 								<tr>
 									<td>gender</td>
-									<td>female</td>
+									<td>{{$gender}}</td>
 								</tr>
 							</table>
 							<div class="update">

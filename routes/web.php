@@ -41,3 +41,5 @@ Route::get('/searching_result','SearchViewController@search_view');
 
 //users view
 Route::get('/users_view','UsersViewController@users_view');
+
+Route::POST('getin', 'LoginController@get_logged_in');
