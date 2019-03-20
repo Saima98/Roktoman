@@ -9,7 +9,8 @@
 				<div class="col-lg-10 col-md-11 col-sm-11">
 					<div id="navbar" class="content">
 						<div class="row">
-							<div class="menu">
+							@yield('header_menu')
+							<!--<div class="menu">
 								<ul class="nav">
 									<li class="current"><a href="#home">home</a></li>
 									<li class="current"><a href="#why_give">why give blood</a></li>
@@ -20,7 +21,7 @@
 							</div>
 							<div class="menu_link">
 								<a href="/login" class="link">sign in <i class="fas fa-portrait"></i></a>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>

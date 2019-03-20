@@ -24,6 +24,17 @@ use Illuminate\Http\Request;
 	<header class="header_area2">
 @endsection
 
+@section('header_menu')
+	<div class="menu">
+		<ul class="nav">
+			<li class="current"><a href="#contact">profile</a></li>
+		</ul>
+	</div>
+	<div class="menu_link">
+		<a href="/login" class="link">log out <i class="fas fa-portrait"></i></a>
+	</div>
+@endsection
+
 @section('home_body')
 		<section class="users_view_area">
 			<div class="container-fluid">
