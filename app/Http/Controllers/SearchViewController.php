@@ -11,21 +11,21 @@ class SearchViewController extends Controller
     	$bloodtype=$request->bloodgroup;
     	$division=$request->division;
 
-    	echo $bloodtype;
-    	echo $division;
+    	// echo $bloodtype;
+    	// echo $division;
 
-    	if($request->division==NULL)
-    		echo "NULL";
+    	// if($request->division==NULL)
+    	// 	echo "NULL";
 
     	$raw=\DB::table('users')->where('bloodgroup', '=', $bloodtype, 'AND', 'division', '=', $division)->get();
 
-    	$count=count($raw);
-    	echo $count;
+    	// $count=count($raw);
+    	// echo $count;
     	
-    	foreach ($raw as $data) {
-    		echo $data->fname;
-    		# code...
-    	}
-		//return view('frontView.home.search_view');
+    	// foreach ($raw as $data) {
+    	// 	echo $data->fname;
+    	// 	# code...
+    	// }
+		return view('frontView.home.search_view',compact('raw'));
 	}
 }

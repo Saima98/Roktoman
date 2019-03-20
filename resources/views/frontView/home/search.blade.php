@@ -28,26 +28,26 @@
 							<div class="blood_group">
 								<label for="bloodGroup">blood group:</label>
 								<select class="" id="" name="bloodgroup" required>
-									<option>A+</option>
-									<option>B+</option>
-									<option>O+</option>
-									<option>AB+</option>
-									<option>A-</option>
-									<option>B-</option>
-									<option>O-</option>
-									<option>AB-</option>
+									<option value="A+">A+</option>
+									<option value="B+">B+</option>
+									<option value="O+">O+</option>
+									<option value="AB+">AB+</option>
+									<option value="A">A-</option>
+									<option value="B-">B-</option>
+									<option value="O-">O-</option>
+									<option value="AB-">AB-</option>
 								</select>
 							</div>
 							<div class="division">
 								<label for="sel1">division:</label>
 								<select class="" id="" name="division" required>
-									<option>Barisal </option>
-									<option>Chittagong </option>
-									<option>Dhaka </option>
-									<option>Khulna </option>
-									<option>Mymensingh </option>
-									<option>Rajshahi </option>
-									<option>Sylhet </option>
+									<option value="Barisal">Barisal </option>
+									<option value="Chittagong">Chittagong </option>
+									<option value="Dhaka">Dhaka </option>
+									<option value="Khulna">Khulna </option>
+									<option value="Mymensingh">Mymensingh </option>
+									<option value="Rajshahi">Rajshahi </option>
+									<option value="Sylhet">Sylhet </option>
 								</select>
 							</div>
 							<input class="btn btn-danger" type="submit" value="search">

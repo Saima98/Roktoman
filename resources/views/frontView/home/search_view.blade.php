@@ -16,7 +16,7 @@
 		<section class="search_view_area">
 			<div class="container-fluid">
 				<div class="hello_massage">
-					<h1>hello user!<br/>there is your all updates</h1>
+					<h1>hello user!<br/>there is the list of <?php echo $raw[0]->bloodgroup; ?> donors</h1>
 				</div>
 				<div class="panel-body">
 					<form action="#">
@@ -28,20 +28,20 @@
 								<th>email</th>
 								<th>adrees</th>
 							</tr>
+							<?php $sr=1;
+							foreach ($raw as $data):
+							 ?>
 							<tr>
-								<td>1</td>
-								<td>saima najmin</td>
-								<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>01721234567<a/></td>
-								<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
-								<td><i class="fa fa-map-marker" aria-hidden="true"></i>zindabazar,sylhet</td>
+								<td>{{$sr}} </td>
+								<td>{{$data->fname.' '.$data->lname}}</td>
+								<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
+								<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
+								<td><i class="fa fa-map-marker" aria-hidden="true"></i>{{$data->division}}</td>
 							</tr>
-							<tr>
-								<td>2</td>
-								<td>saima najmin</td>
-								<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>01721234567<a/></td>
-								<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
-								<td><i class="fa fa-map-marker" aria-hidden="true"></i>zindabazar,sylhet</td>
-							</tr>
+							<?php 
+							  $sr++;
+							  endforeach;
+							?>
 						</table>
 					</form>
 				</div>
