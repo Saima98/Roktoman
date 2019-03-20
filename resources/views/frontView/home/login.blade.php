@@ -8,6 +8,10 @@
 	<header class="header_area2">
 @endsection
 
+@section('header_menu')
+	
+@endsection
+
 @section('home_body')
 		<section class="register_area container">
 			<div class="register row">

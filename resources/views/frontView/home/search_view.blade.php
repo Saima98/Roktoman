@@ -8,6 +8,10 @@
 	<header class="header_area2">
 @endsection
 
+@section('header_menu')
+	
+@endsection
+
 @section('home_body')
 		<section class="search_view_area">
 			<div class="container-fluid">

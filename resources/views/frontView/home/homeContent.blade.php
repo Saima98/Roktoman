@@ -8,6 +8,21 @@
 	<header class="header_area">
 @endsection
 
+@section('header_menu')
+	<div class="menu">
+		<ul class="nav">
+			<li class="current"><a href="#home">home</a></li>
+			<li class="current"><a href="#why_give">why give blood</a></li>
+			<li class="current"><a href="#who_can_give">who can give blood</a></li>
+			<li class="current"><a href="#achievement">achievement</a></li>
+			<li class="current"><a href="#contact">contact</a></li>
+		</ul>
+	</div>
+	<div class="menu_link">
+		<a href="/login" class="link">log in <i class="fas fa-portrait"></i></a>
+	</div>
+@endsection
+
 @section('home_body')
 	<!--BANNER SECTION START-->
 		<section id="slider_banner" class="slider_banners">
