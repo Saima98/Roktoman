@@ -20,7 +20,7 @@
 				</div>
 				<div class="panel-body">
 					<form action="#">
-						<table class="table table-striped">
+						<table class="table table-bordered table-striped">
 							<tr>
 								<th>id</th>
 								<th>name</th>

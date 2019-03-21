@@ -42,13 +42,13 @@ use Illuminate\Http\Request;
 					<div class="col-3">
 						<div class="users_view_left">
 							<ul>
-								<li>my information</li>
-								<li>blood posts</li>
+								<li id="my_info">my information</li>
+								<li id="blood_posts">blood posts</li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-9">
-						<div class="users_view_right">
+						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="hello_massage">
 								<h1>hello {{$fname.' '.$lname}}!</h1>
 							</div>
@@ -59,7 +59,7 @@ use Illuminate\Http\Request;
 								</tr>
 								<tr>
 									<td>email</td>
-									<td>{{$email}}</td>
+									<td class="text_transform_none">{{$email}}</td>
 								</tr>
 								<tr>
 									<td>phone number</td>
@@ -94,6 +94,34 @@ use Illuminate\Http\Request;
 									<a href="#" class="box_bttn">update</a>
 							</div>
 						</div>
+						<div class="users_view_right_posts" id="users_view_right_posts">
+							<div class="hello_massage">
+								<h1>hello user !<br/>they need help.please help.</h1>
+							</div>
+							<table class="table table-striped">
+								<tr>
+									<th>id</th>
+									<th>name</th>
+									<th>phone number</th>
+									<th>email</th>
+									<th>adrees</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>saima najmin</td>
+									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>01721234567<a/></td>
+									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
+									<td><i class="fa fa-map-marker" aria-hidden="true"></i>zindabazar,sylhet</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>saima najmin</td>
+									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>01721234567<a/></td>
+									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
+									<td><i class="fa fa-map-marker" aria-hidden="true"></i>zindabazar,sylhet</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -105,4 +133,16 @@ use Illuminate\Http\Request;
 		<script src="assets/js/wow.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#my_info").click(function(){
+					$("#users_view_right_posts").hide();
+					$("#users_view_right_info").show();
+				});
+				$("#blood_posts").click(function(){
+					$("#users_view_right_posts").show();
+					$("#users_view_right_info").hide();
+				});
+			});
+		</script>
 @endsection
