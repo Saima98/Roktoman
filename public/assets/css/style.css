@@ -922,3 +922,54 @@ span{
 .users_view_right_posts table tr td a:hover {
 	color: #e60d0d;
 }
+
+
+
+/*===========================================================
+					ADMIN VIEW
+============================================================*/
+
+
+.admin_view_area {
+	background-color: black;
+	border-top: 1px solid gray;
+	margin-top: 68px;
+	color: white;
+}
+.admin_view_area .users_view_left {
+	margin-top: 0;
+}
+.admin_view_area .users_view_left ul li {
+	padding: 19px;
+	text-align: center;
+	text-transform: capitalize;
+	border: 1px solid gray;
+	margin: 0 -31px;
+}
+.admin_view_area .users_view_left ul li:hover {
+	background-color: #212529;
+	color: white;
+	border: 1px solid gray;
+}
+.admin_view_area .users_view_right_info{
+	background-color: #212529;
+	border-left: 1px solid gray;
+}
+.admin_view_area .hello_massage {
+	margin-top: 0;
+	padding: 40px;
+}
+.admin_view_area .users_view_right_info table tr td a {
+	background-color: #e60d0d;
+	color: white;
+	padding: 7px 20px;
+	text-decoration: none;
+}
+.admin_view_area .users_view_right_posts {
+	background-color: #212529;
+	border-left: 1px solid gray;
+	display: none;
+}
+#myModal {
+	margin-top: 100px;
+}
