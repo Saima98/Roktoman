@@ -815,12 +815,12 @@ span{
 
 
 /*===============================================================
-							USERS VIEW
+							SEARCH VIEW
 ================================================================*/
 
 
 .text_transform_none{
-	text-transform: none;
+	text-transform: unset;
 }
 .hello_massage {
 	margin-top: 68px;
@@ -879,15 +879,15 @@ span{
 	color: white;
 	border: 1px solid gray;
 }
-.users_view_right{
+.users_view_right_info{
 	background-color: white;
 	border-left: 1px solid gray;
 }
-.users_view_right table tr td {
+.users_view_right_info table tr td {
 	padding-left: 35px;
 	text-transform: capitalize;
 }
-.users_view_right table tr td a {
+.users_view_right_info table tr td a {
 	background-color: #e60d0d;
 	color: white;
 	padding: 7px 20px;
@@ -897,4 +897,79 @@ span{
 .update a {
 	margin-left: 35px;
 	padding: 11px 40px;
+}
+.users_view_right_posts {
+	background-color: white;
+	border-left: 1px solid gray;
+	display: none;
+}
+.users_view_right_posts table tr{
+	text-transform:capitalize;
+}
+.users_view_right_posts table tr td i.fa {
+	margin-right: 20px;
+	font-size: 19px;
+}
+.users_view_right_posts table tr td a {
+	margin-right: 20px;
+	font-size: 19px;
+}
+.users_view_right_posts table tr td a {
+	text-decoration: none;
+	color: black;
+	font-size: 17px;
+}
+.users_view_right_posts table tr td a:hover {
+	color: #e60d0d;
+}
+
+
+
+/*===========================================================
+					ADMIN VIEW
+============================================================*/
+
+
+.admin_view_area {
+	background-color: black;
+	border-top: 1px solid gray;
+	margin-top: 68px;
+	color: white;
+}
+.admin_view_area .users_view_left {
+	margin-top: 0;
+}
+.admin_view_area .users_view_left ul li {
+	padding: 19px;
+	text-align: center;
+	text-transform: capitalize;
+	border: 1px solid gray;
+	margin: 0 -31px;
+}
+.admin_view_area .users_view_left ul li:hover {
+	background-color: #212529;
+	color: white;
+	border: 1px solid gray;
+}
+.admin_view_area .users_view_right_info{
+	background-color: #212529;
+	border-left: 1px solid gray;
+}
+.admin_view_area .hello_massage {
+	margin-top: 0;
+	padding: 40px;
+}
+.admin_view_area .users_view_right_info table tr td a {
+	background-color: #e60d0d;
+	color: white;
+	padding: 7px 20px;
+	text-decoration: none;
+}
+.admin_view_area .users_view_right_posts {
+	background-color: #212529;
+	border-left: 1px solid gray;
+	display: none;
+}
+#myModal {
+	margin-top: 100px;
 }

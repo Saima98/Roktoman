@@ -48,3 +48,6 @@ Route::get('/logout','LoginController@logout');
 Route::POST('getin', 'LoginController@get_logged_in');
 
 Route::POST('showSearchList','SearchViewController@search_view');
+
+//admins view
+Route::get('/admins_view','AdminsViewController@admins_view');
