@@ -11,45 +11,94 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/donate',function() {
-// 	return view('donation');
-// });
+// Register Controllers //
 
-//home root
-Route::get('/','FrontController@index');
-Route::get('/home','FrontController@index');
-//register root
-Route::get('/register','RegisterController@register');
-//Register data to DB
-Route::POST('newregistration','RegisterController@insert');
+Route::get('/register','RegisterController@register'); //register root
 
-Route::POST('passmessage','MessageController@insert');
-//
-//Route::get('newregistration','FrontController@index');
-Route::get('/search','SearchController@search');
+Route::POST('newregistration','RegisterController@insert'); //Register data to DB
 
-//login root
-Route::get('/login','LoginController@login');
+// End of Register Controller //
 
-//search root
-Route::get('/search','SearchController@search');
 
-//search view
+//***************************************************//
+
+
+// Login Controller //
+
+Route::get('/login','LoginController@login'); //login root
+
+Route::POST('getin', 'LoginController@get_logged_in'); // to user panel authenticate
+
+Route::get('/logout','LoginController@logout'); // Logout
+
+// End of Login Controller //
+
+
+//***************************************************//
+
+
+// Make Post Controller //
+
+Route::get('/makepost','MakePostController@makepost');// return the view file
+
+Route::POST('createpost','MakePostController@createpost'); // to create a post
+
+// End of Make Post Controller //
+
+
+//***************************************************//
+
+
+// Search View Controller //
+
 Route::get('/searching_result','SearchViewController@search_view');
-
-Route::get('/makepost','MakePostController@makepost');//post making
-
-//users view
-Route::get('/users_view','UsersViewController@users_view');
-
-Route::get('/logout','LoginController@logout');
-
-Route::POST('getin', 'LoginController@get_logged_in');
 
 Route::POST('showSearchList','SearchViewController@search_view');
 
-//admins view
-Route::get('/admins_view','AdminsViewController@admins_view');
+// End of Search View Controller //
+
+
+//***************************************************//
+
+
+// Search Controller //
+
+Route::get('/search','SearchController@search');
+
+// End of Search Controller //
+
+
+//***************************************************//
+
+
+// Message Controller //
+
+Route::POST('passmessage','MessageController@insert');
+
+// End of Message Controller //
+
+
+//***************************************************//
+
+
+// User/Admin Panel Controller //
+
+Route::get('/users_view','UsersViewController@users_view'); //user panel
+
+Route::get('/admins_view','AdminsViewController@admins_view'); //admin panel
+
+// End of User/Admin Panel Controller //
+
+
+//***************************************************//
+
+// Home //
+
+Route::get('/','FrontController@index');
+
+Route::get('/home','FrontController@index');
+
+// End of Home //
+
+
+//***************************************************//

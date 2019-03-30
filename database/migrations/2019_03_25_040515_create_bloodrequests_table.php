@@ -14,6 +14,12 @@ class CreateBloodrequestsTable extends Migration
         Schema::create('bloodrequests', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('name');
+            $table->integer('number');
+            $table->string('bloodgroup');
+            $table->string('division');
+            $table->text('address')->nullable();
+            $table->text('message')->nullable();
         });
     }
     /**

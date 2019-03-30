@@ -46,7 +46,7 @@
 					</form>
 				</div>
 				<div class="make_post">
-						<a href="#" class="box_bttn">make post</a>
+						<a href="makepost" class="box_bttn">make post</a>
 				</div>
 			</div>
 		</section>
