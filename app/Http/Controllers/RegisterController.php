@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -25,10 +26,11 @@ class RegisterController extends Controller
       if($checkmark=="yes")
          $lastdonate=$request->input('lastdonate');
       $gender=$request->gender;
+      $password_hash=Hash::make($password);
       \DB::table('users')->insert([
-    	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'lastdonate'=>$lastdonate, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
+    	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password_hash,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'lastdonate'=>$lastdonate, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
 	]);
-		//return view('users_view')
+		return view('frontView.home.login');
       //echo "Record inserted successfully.<br/>";
       //echo '<a href = "/insert">Click Here</a> to go back.';
    }
