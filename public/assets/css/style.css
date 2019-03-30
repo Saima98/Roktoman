@@ -820,7 +820,7 @@ span{
 
 
 .text_transform_none{
-	text-transform: unset;
+	text-transform: unset !important;
 }
 .hello_massage {
 	margin-top: 68px;

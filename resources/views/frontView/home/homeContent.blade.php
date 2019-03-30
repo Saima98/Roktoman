@@ -42,10 +42,10 @@ use Illuminate\Http\Request;
 						@if(isset($email))
 							
 						@else
-							<a href="#" class="box_bttn">registration now</a>
-							<a href="#" class="border_bttn">sign up</a>
+							<a href="/register" class="box_bttn">registration now</a>
+							<a href="/register" class="border_bttn">sign up</a>
 						@endif
-							<a href="search" class="box_bttn">search for blood</a>
+							<a href="/search" class="box_bttn">search for blood</a>
 						</div>
 					</div>
 				</div>
@@ -237,7 +237,7 @@ use Illuminate\Http\Request;
 								<!--{{ csrf_field() }}-->
 								@csrf
 									<input type="text" name="name" placeholder="name" required>
-									<input id="email" type="email" name="email" placeholder="email" required>
+									<input class="text_transform_none" id="email" type="email" name="email" placeholder="email" required>
 									<textarea id="message" name="message" placeholder="Message" required></textarea>
 									<input class="box_bttn" type="submit" value="send message">
 								</form>
