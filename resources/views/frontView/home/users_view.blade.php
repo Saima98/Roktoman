@@ -31,7 +31,7 @@ use Illuminate\Http\Request;
 		</ul>
 	</div>
 	<div class="menu_link">
-		<a href="/logout" class="link">log out <i class="fas fa-sign-out-alt"></i></a>
+		<a href="/logout" class="link">log out <i class="fas fa-portrait"></i></a>
 	</div>
 @endsection
 
@@ -74,7 +74,7 @@ use Illuminate\Http\Request;
 									<td>{{$DOB}}</td>
 								</tr>
 								<tr>
-									<td>weigth</td>
+									<td>weight</td>
 									<td>{{$weight}}</td>
 								</tr>
 								<tr>
