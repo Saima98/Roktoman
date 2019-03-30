@@ -831,6 +831,9 @@ span{
 	text-transform: capitalize;
 	font-size: 30px;
 }
+.search_view_area{
+	min-height:600px;
+}
 .search_view_area table tr{
 	text-transform:capitalize;
 }
@@ -902,6 +905,7 @@ span{
 	background-color: white;
 	border-left: 1px solid gray;
 	display: none;
+	min-height: 600px;
 }
 .users_view_right_posts table tr{
 	text-transform:capitalize;
@@ -969,6 +973,7 @@ span{
 	background-color: #212529;
 	border-left: 1px solid gray;
 	display: none;
+	min-height: 600px;
 }
 #myModal {
 	margin-top: 100px;

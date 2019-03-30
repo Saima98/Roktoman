@@ -31,7 +31,7 @@ use Illuminate\Http\Request;
 		</ul>
 	</div>
 	<div class="menu_link">
-		<a href="/logout" class="link">log out <i class="fas fa-portrait"></i></a>
+		<a href="/logout" class="link">log out <i class="fas fa-sign-out-alt"></i></a>
 	</div>
 @endsection
 
