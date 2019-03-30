@@ -1,3 +1,19 @@
+<?php
+use Illuminate\Http\Request;
+	$fname=session()->get('fname');
+	$lname=session()->get('lname');
+	$DOB=session()->get('DOB');
+	$weight=session()->get('weight');
+	$division=session()->get('division');
+	$email=session()->get('email');
+	$lastdonate=session()->get('lastdonate');
+	$number=session()->get('number');
+	$bloodgroup=session()->get('bloodgroup');
+	$gender=session()->get('gender');
+	if($lastdonate==NULL)
+		$lastdonate="N/A";
+?>
+
 @extends('frontView.master')
 
 @section('title_area')
@@ -65,48 +81,44 @@
 					<div class="col-9">
 						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="hello_massage">
-								<h1>hello admin !</h1>
+								<h1>Hello Admin {{$fname.' '.$lname}} !</h1>
 							</div>
 							<table class="table table-dark table-striped">
 								<tr>
 									<td>name</td>
-									<td>saima najmin</td>
+									<td>{{$fname.' '.$lname}}</td>
 								</tr>
 								<tr>
 									<td>email</td>
-									<td class="text_transform_none">saima najmin</td>
+									<td class="text_transform_none">{{$email}}</td>
 								</tr>
 								<tr>
 									<td>phone number</td>
-									<td>saima najmin</td>
-								</tr>
-								<tr>
-									<td>password</td>
-									<td class="text_transform_none">anni akta bhalo meye</td>
+									<td>{{$number}}</td>
 								</tr>
 								<tr>
 									<td>division</td>
-									<td>saima najmin</td>
+									<td>{{$division}}</td>
 								</tr>
 								<tr>
 									<td>birthday</td>
-									<td>saima najmin</td>
+									<td>{{$DOB}}</td>
 								</tr>
 								<tr>
-									<td>weigth</td>
-									<td>saima najmin</td>
+									<td>weight</td>
+									<td>{{$weight}}</td>
 								</tr>
 								<tr>
 									<td>blood group</td>
-									<td>saima najmin</td>
+									<td>{{$bloodgroup}}</td>
 								</tr>
 								<tr>
 									<td>last donation date</td>
-									<td>saima najmin</td>
+									<td>{{$lastdonate}}</td>
 								</tr>
 								<tr>
 									<td>gender</td>
-									<td>saima najmin</td>
+									<td>{{$gender}}</td>
 								</tr>
 							</table>
 							<div class="update">

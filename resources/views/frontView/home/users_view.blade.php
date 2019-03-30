@@ -74,7 +74,7 @@ use Illuminate\Http\Request;
 									<td>{{$DOB}}</td>
 								</tr>
 								<tr>
-									<td>weigth</td>
+									<td>weight</td>
 									<td>{{$weight}}</td>
 								</tr>
 								<tr>

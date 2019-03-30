@@ -16,4 +16,10 @@ class AdminsViewController extends Controller
 		return view('frontView.home.admin_view');
 	}
 
+	public function feedback_list(){
+		$messages = \DB::table('comments')->get();
+
+		return view('frontView.home.admin_view',compact('messages'));
+	}
+
 }
