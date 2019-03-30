@@ -40,6 +40,8 @@ Route::get('/search','SearchController@search');
 //search view
 Route::get('/searching_result','SearchViewController@search_view');
 
+Route::get('/makepost','MakePostController@makepost');//post making
+
 //users view
 Route::get('/users_view','UsersViewController@users_view');
 

@@ -19,7 +19,15 @@
 		</ul>
 	</div>
 	<div class="menu_link">
+<?php
+use Illuminate\Http\Request;
+	$email=session()->get('email');
+?>
+		@if(isset($email))
+		<a href="/logout" class="link">log out <i class="fas fa-sign-out-alt"></i></a>
+		@else
 		<a href="/login" class="link">log in <i class="fas fa-portrait"></i></a>
+		@endif
 	</div>
 @endsection
 
@@ -31,8 +39,12 @@
 					<div class="container-fluid">
 						<div class="single_banner">
 							<h1>every blood dooner<Br/>is a <span>life saver</span></h1>
+						@if(isset($email))
+							
+						@else
 							<a href="#" class="box_bttn">registration now</a>
 							<a href="#" class="border_bttn">sign up</a>
+						@endif
 							<a href="search" class="box_bttn">search for blood</a>
 						</div>
 					</div>
@@ -188,7 +200,11 @@
 						<h2>become a part Of great work today</h2>
 						<p>You can give blood at any of our blood donation venues all over the world. 
 						We have total sixty thousands donor centers and visit thousands of other venues on various occasions. </p>
+					@if(isset($email))
+							
+					@else
 						<a href="#" class="box_bttn">join with us</a>
+					@endif
 					</div>
 				</div>
 			</div>
