@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 	$gender=session()->get('gender');
 	if($lastdonate==NULL)
 		$lastdonate="N/A";
+
+	$requests=\DB::table('bloodrequests')->get();
 ?>
 
 @extends('frontView.master')
@@ -98,28 +100,30 @@ use Illuminate\Http\Request;
 							<div class="hello_massage">
 								<h1>hello user !<br/>they need help.please help.</h1>
 							</div>
-							<table class="table table-striped">
+							<table class="table table-light table-striped">
 								<tr>
 									<th>id</th>
 									<th>name</th>
-									<th>phone number</th>
-									<th>email</th>
-									<th>adrees</th>
+									<th>number</th>
+									<th>bloodgroup</th>
+									<th>division</th>
+									<th>message</th>
 								</tr>
+								<?php $sr=1;
+									foreach ($requests as $data):
+							 	?>
 								<tr>
-									<td>1</td>
-									<td>saima najmin</td>
-									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>01721234567<a/></td>
-									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
-									<td><i class="fa fa-map-marker" aria-hidden="true"></i>zindabazar,sylhet</td>
+									<td>{{$sr}}</td>
+									<td>{{$data->name}}</td>
+									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
+									<td>{{$data->bloodgroup}}</td>
+									<td><i class="fa fa-map-marker" aria-hidden="true"></i>{{$data->division}}</td>
+									<td>{{$data->message}}</td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>saima najmin</td>
-									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>01721234567<a/></td>
-									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
-									<td><i class="fa fa-map-marker" aria-hidden="true"></i>zindabazar,sylhet</td>
-								</tr>
+								<?php 
+							  		$sr++;
+							  		endforeach;
+								?>
 							</table>
 						</div>
 					</div>

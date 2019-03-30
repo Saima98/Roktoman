@@ -17,7 +17,9 @@ class LoginController extends Controller
 		$password = $request->input('password');
 		$raw = \DB::table('users')->where('email','=', $email )->get();
 
-
+		$raw_count = \DB::table('users')->where('email','=', $email )->count();
+		if($raw_count==0)
+			return view('frontView.home.login');
 		$mainpass=$raw[0]->password;
 
 		if(Hash::check($password, $mainpass))
