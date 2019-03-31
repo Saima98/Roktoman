@@ -877,7 +877,12 @@ span{
 	border-bottom: 1px solid gray;
 	margin: 0 -31px;
 }
-.users_view_left ul li:hover {
+/*.users_view_left ul li:hover {
+	background-color: black;
+	color: white;
+	border: 1px solid gray;
+}*/
+.aclive_link_user {
 	background-color: black;
 	color: white;
 	border: 1px solid gray;
@@ -900,6 +905,47 @@ span{
 .update a {
 	margin-left: 35px;
 	padding: 11px 40px;
+}
+.update_sec{
+	padding-top:120px;
+}
+.back_cross {
+	display: inline-block;
+	position: fixed;
+	top: 80px;
+	right: 35px;
+	cursor: pointer;
+}
+.back_cross i.fas {
+	font-size: 32px;
+}
+.update_sec form{}
+.update_form{}
+.form_input {
+	margin: 20px 0;
+	overflow: hidden;
+}
+.form_input label{
+	float: left;
+}
+.form_input input[type="text"],.form_input input[type="email"],.form_input input[type="int"],.form_input input[type="tel"],.form_input input[type="date"],.form_input input[type="password"],.form_input select {
+	float: right;
+	width: 80%;
+}
+.radio_input {
+	float: left;
+	margin-left: 20%;
+	width: 80%;
+}
+.radio_input label {
+	margin-right: 50px;
+}
+/*.form_input input[type="password"]:nth-child(1) {}*/
+.update_sec .update a{
+	margin-left: 0;
+}
+#update_sec{
+	display: none;
 }
 .users_view_right_posts {
 	background-color: white;
@@ -926,7 +972,6 @@ span{
 .users_view_right_posts table tr td a:hover {
 	color: #e60d0d;
 }
-
 
 
 /*===========================================================
@@ -977,4 +1022,12 @@ span{
 }
 #myModal {
 	margin-top: 100px;
+}
+.delete_btn {
+	background-color: #e60d0d;
+	padding: 8px 20px;
+	color: white !important;
+}
+.delete_btn:hover {
+	background-color: #d52020;
 }

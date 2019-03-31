@@ -125,7 +125,7 @@ use Illuminate\Http\Request;
 								</tr>
 							</table>
 							<div class="update">
-									<a href="#" class="box_bttn">update</a>
+								<a href="#" class="box_bttn">update</a>
 							</div>
 						</div>
 						<div class="users_view_right_posts" id="users_view_right_posts">
@@ -168,6 +168,7 @@ use Illuminate\Http\Request;
 									<th>name</th>
 									<th>email</th>
 									<th>message</th>
+									<th></th>
 								</tr>
 								</tr>
 								<?php $sr=1;
@@ -178,6 +179,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->name}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td>{{$data->message}}</td>
+									<td><a class="delete_btn" href="#">delete</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
