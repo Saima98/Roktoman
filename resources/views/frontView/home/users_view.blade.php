@@ -33,7 +33,7 @@ use Illuminate\Http\Request;
 		</ul>
 	</div>
 	<div class="menu_link">
-		<a href="/logout" class="link">log out <i class="fas fa-portrait"></i></a>
+		<a href="/logout" class="link">log out <i class="fas fa-sign-out-alt"></i></a>
 	</div>
 @endsection
 
@@ -159,7 +159,7 @@ use Illuminate\Http\Request;
 												<label class=""><input type="radio" name="optradio">Other</label>
 											</div> -->
 											<div class="form_input">
-												<label for="old-pass">Present password:</label>
+												<label for="old-pass">Old password:</label>
 												<input type="password" class="form-control" id="">
 											</div>
 											<div class="form_input">
@@ -167,7 +167,7 @@ use Illuminate\Http\Request;
 												<input type="password" class="form-control" id="">
 											</div>
 											<div class="form_input">
-												<label for="matchPass">Re-password:</label>
+												<label for="matchPass">Confirm-password:</label>
 												<input type="password" class="form-control" id="">
 											</div>
 										</form>

@@ -202,7 +202,8 @@ span{
 
 /* BANNER */
 .banner_area{
-	background-image: url("../img/banner4.jpg");
+	background-image: url("../img/donating_blood.jpg");
+	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -995,7 +996,7 @@ span{
 	border: 1px solid gray;
 	margin: 0 -31px;
 }
-.admin_view_area .users_view_left ul li:hover {
+.aclive_link_admin {
 	background-color: #212529;
 	color: white;
 	border: 1px solid gray;
@@ -1019,6 +1020,9 @@ span{
 	border-left: 1px solid gray;
 	display: none;
 	min-height: 600px;
+}
+.admin_view_area .users_view_right_posts table tr td a {
+	color: white;
 }
 #myModal {
 	margin-top: 100px;

@@ -9,7 +9,9 @@
 @endsection
 
 @section('header_menu')
-	
+	<div class="menu_link mb-2">
+		<a href="/register" class="link">register <i class="fas fa-portrait"></i></a>
+	</div>
 @endsection
 
 @section('home_body')

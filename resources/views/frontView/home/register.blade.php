@@ -9,7 +9,9 @@
 @endsection
 
 @section('header_menu')
-	
+	<div class="menu_link mb-2">
+		<a href="/login" class="link">log in <i class="fas fa-portrait"></i></a>
+	</div>
 @endsection
 
 @section('home_body')
@@ -35,6 +37,7 @@
 							<small id="passwordHelpBlock" class="form-text text-muted">
 							Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 							</small>
+							<input type="password" name="password" placeholder="confirm password" required>
 							<div class="division">
 								<label for="sel1">division:</label>
 								<select class="" id="" name="division" required>
