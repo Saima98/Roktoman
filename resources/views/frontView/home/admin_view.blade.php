@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 	$requests=\DB::table('bloodrequests')->get();
 	$comments=\DB::table('comments')->get();
 	$users=\DB::table('users')->get();
+	$admin = \DB::table('users')->where('adminship','=', 1 )->get();
 ?>
 
 @extends('frontView.master')
@@ -264,7 +265,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->name}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td>{{$data->message}}</td>
-									<td><a class="delete_btn" href="#">delete</a></td>
+									<td><a class="delete_btn" href="{{ action('AdminsViewController@delete', $data->id) }}">delete</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -312,13 +313,20 @@ use Illuminate\Http\Request;
 									<th>number</th>
 									<th></th>
 								</tr>
+								<?php $sr=1;
+									foreach ($admin as $data):
+							 	?>
 								<tr>
-									<td>1</td>
-									<td>saima</td>
-									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
-									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>0123456789<a/></td>
+									<td>{{$sr}}</td>
+									<td>{{$data->fname}} {{$data->lname}}</td>
+									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
+									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
 									<td><a class="delete_btn" href="#">remove admin</a></td>
 								</tr>
+								<?php 
+							  		$sr++;
+							  		endforeach;
+								?>
 							</table>
 						</div>
 					</div>
