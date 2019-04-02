@@ -21,5 +21,11 @@ class AdminsViewController extends Controller
 
 		return view('frontView.home.admin_view',compact('messages'));
 	}
+	//for user lists
+	public function users_list(){
+		$users = \DB::table('users')->get();
+
+		return view('frontView.home.admin_view',compact('users'));
+	}
 
 }

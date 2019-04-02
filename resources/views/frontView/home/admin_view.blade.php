@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 	$requests=\DB::table('bloodrequests')->get();
 	$comments=\DB::table('comments')->get();
+	$users=\DB::table('users')->get();
 ?>
 
 @extends('frontView.master')
@@ -283,13 +284,20 @@ use Illuminate\Http\Request;
 									<th>number</th>
 									<th></th>
 								</tr>
+								<?php $sr=1;
+									foreach ($users as $data):
+							 	?>
 								<tr>
-									<td>1</td>
-									<td>saima</td>
-									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>saimanajin@gmail.com<a/></td>
-									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>0123456789<a/></td>
+									<td>{{$sr}}</td>
+									<td>{{$data->fname}} {{$data->lname}}</td>
+									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
+									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
 									<td><a class="delete_btn" href="#">make admin</a></td>
 								</tr>
+								<?php 
+							  		$sr++;
+							  		endforeach;
+								?>
 							</table>
 						</div>
 						<div class="users_view_right_posts" id="all_admin">

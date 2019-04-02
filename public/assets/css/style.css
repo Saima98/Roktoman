@@ -1023,6 +1023,7 @@ span{
 }
 .admin_view_area .users_view_right_posts table tr td a {
 	color: white;
+	text-transform: lowercase;
 }
 #myModal {
 	margin-top: 100px;
