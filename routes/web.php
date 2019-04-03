@@ -84,9 +84,12 @@ Route::POST('passmessage','MessageController@insert');
 // User/Admin Panel Controller //
 
 Route::get('/users_view','UsersViewController@users_view'); //user panel
+Route::POST('/users_view/update','UsersViewController@update'); //user panel
 
 Route::get('/admins_view','AdminsViewController@admins_view'); //admin panel
 Route::get('/admins/delete/{id}','AdminsViewController@delete'); //message delete
+Route::get('/admins/makeAdmin/{id}','AdminsViewController@makeAdmin'); //make admin
+Route::get('/admins/removeAdmin/{id}','AdminsViewController@removeAdmin'); //remove admin
 
 // End of User/Admin Panel Controller //
 

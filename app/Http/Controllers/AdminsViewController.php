@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use\App\Comment;
+use\App\User;
 
 class AdminsViewController extends Controller
 {
@@ -46,5 +47,25 @@ class AdminsViewController extends Controller
         return redirect()->back();
     }
 	
-
+	//makeAdmin
+	
+	public function makeAdmin($id){
+		
+		\DB::table('users')
+            ->where('id', $id)
+            ->update(['adminship' => '1']);
+		
+		return redirect('/admins_view');
+    }
+	
+	//removeAdmin
+	
+	public function removeAdmin($id){
+		
+		\DB::table('users')
+            ->where('id', $id)
+            ->update(['adminship' => '0']);
+			
+		return redirect('/admins_view');
+    }
 }

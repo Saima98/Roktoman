@@ -139,62 +139,46 @@ use Illuminate\Http\Request;
 								</div>
 								<div class="row">
 									<div class="col-10 mx-auto">
-										<form class="update_form" action="#">
+										<form class="update_form" action="{{url('/users_view/update')}}" method="post" enctype="multipart/form-data">
+										@csrf
 											<div class="form_input">
-												<label for="name">Your name:</label>
-												<input type="text" class="form-control" id="name">
+												<label for="name">First name:</label>
+												<input type="text" class="form-control" name="fname" id="fname" value="{{$fname}}">
 											</div>
 											<div class="form_input">
-												<label for="email">Email address:</label>
-												<input type="email" class="form-control" id="email">
+												<label for="name">Last name:</label>
+												<input type="text" class="form-control" name="lname" id="fname" value="{{$lname}}">
 											</div>
 											<div class="form_input">
 												<label for="tel">Phone number:</label>
-												<input type="tel" class="form-control" id="tel">
+												<input type="tel" class="form-control" name="tel" id="tel" value="{{$number}}">
 											</div>
 											<div class="form-group form_input">
 												<label for="email">Division:</label>
-												<select class="form-control" id="" required>
-													<option>Barisal </option>
-													<option>Chittagong </option>
-													<option>Dhaka </option>
-													<option>Khulna </option>
-													<option>Mymensingh </option>
-													<option>Rajshahi </option>
-													<option>Sylhet </option>
+												<select class="form-control" id=""  name="division" value="{{$division}}" required>
+													<option value="Barisal">Barisal </option>
+													<option value="Chittagong">Chittagong </option>
+													<option value="Dhaka">Dhaka </option>
+													<option value="Khulna">Khulna </option>
+													<option value="Mymensingh">Mymensingh </option>
+													<option value="Rajshahi">Rajshahi </option>
+													<option value="Sylhet">Sylhet </option>
 												</select>
-											</div>
-											<div class="form_input">
-												<label for="birthday">Birthday:</label>
-												<input type="date" class="form-control" id="birthday">
 											</div>
 											<div class="form_input">
 												<label for="weidth">Weidth:</label>
-												<input type="int" class="form-control" id="weidth">
-											</div>
-											<div class="form-group form_input">
-												<label for="bloodGroup">Blood group:</label>
-												<select class="form-control" id="">
-													<option>A+</option>
-													<option>B+</option>
-													<option>O+</option>
-													<option>AB+</option>
-													<option>A-</option>
-													<option>B-</option>
-													<option>O-</option>
-													<option>AB-</option>
-												</select>
+												<input type="int" class="form-control" id="weigth" name="weigth" value="{{$weight}}">
 											</div>
 											<div class="form_input">
 												<label for="lastDonate">Last donate:</label>
-												<input type="date" class="form-control" id="last_donate">
+												<input type="date" class="form-control" id="last_donate" name="last_donate" value="{{$lastdonate}}">
 											</div>
 											<!-- <div class="form_input radio_input">
 												<label class=""><input type="radio" name="optradio" checked>Male</label>
 												<label class=""><input type="radio" name="optradio">Female</label>
 												<label class=""><input type="radio" name="optradio">Other</label>
 											</div> -->
-											<div class="form_input">
+											<!-- <div class="form_input">
 												<label for="old-pass">Old password:</label>
 												<input type="password" class="form-control" id="">
 											</div>
@@ -205,11 +189,15 @@ use Illuminate\Http\Request;
 											<div class="form_input">
 												<label for="matchPass">Confirm-password:</label>
 												<input type="password" class="form-control" id="">
+											</div> -->
+											<input type="email" name="email" value="{{$email}}">
+											<div class="submit">
+												<input type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
-										<div class="update">
+										<!--<div class="update">
 											<a href="#" class="box_bttn">update</a>
-										</div>
+										</div>-->
 									</div>
 								</div>
 							</div>
@@ -293,7 +281,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="#">make admin</a></td>
+									<td><a class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -321,7 +309,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="#">remove admin</a></td>
+									<td><a class="delete_btn" href="{{url('/admins/removeAdmin',$data->id) }}">remove admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
