@@ -96,6 +96,9 @@ use Illuminate\Http\Request;
 								<div class="update">
 									<a id="update" href="#" class="box_bttn">update</a>
 								</div>
+								<div class="update">
+									<a id="change_pass" href="#" class="box_bttn">change password</a>
+								</div>
 							</div>
 							<div class="update_sec" id="update_sec">
 								<div class="back_cross" id="back_cross">
@@ -159,9 +162,34 @@ use Illuminate\Http\Request;
 												<input type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
-										<!--<div class="update">
-											<a href="#" class="box_bttn">update</a>
-										</div>-->
+									</div>
+								</div>
+							</div>
+							<div class="update_sec" id="change_pass_sec">
+								<div class="back_cross" id="back_cross">
+									<i class="fas fa-times"></i>
+								</div>
+								<div class="row">
+									<div class="col-10 mx-auto">
+										<form class="update_form" action="{{url('/changepass')}}" method="post" enctype="multipart/form-data">
+										@csrf
+											<div class="form_input">
+												<label for="old-pass">Old password:</label>
+												<input type="password" class="form-control" name="oldpass" id="" required>
+											</div>
+											<div class="form_input">
+												<label for="newPass">New password:</label>
+												<input type="password" class="form-control" name="newpass" id="" required>
+											</div>
+											<div class="form_input">
+												<label for="matchPass">Confirm-password:</label>
+												<input type="password" class="form-control" name="confirmpass" id="" required>
+											</div>
+											<input type="email" name="email" value="{{$email}}">
+											<div class="submit">
+												<input type="submit" class="box_bttn" value="change password">
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -220,10 +248,22 @@ use Illuminate\Http\Request;
 				$("#update").click(function(){
 					$("#update_sec").show();
 					$("#users_info").hide();
+					$("#change_pass_sec").hide();
 				});
 				$("#back_cross").click(function(){
 					$("#update_sec").hide();
+					$("#change_pass_sec").hide();
 					$("#users_info").show();
+				});
+				$("#change_back_cross").click(function(){
+					$("#update_sec").hide();
+					$("#change_pass_sec").hide();
+					$("#users_info").show();
+				});
+				$("#change_pass").click(function(){
+					$("#update_sec").hide();
+					$("#users_info").hide();
+					$("#change_pass_sec").show();
 				});
 			});
 			//Active link

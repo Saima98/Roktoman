@@ -85,6 +85,7 @@ Route::POST('passmessage','MessageController@insert');
 
 Route::get('/users_view','UsersViewController@users_view'); //user panel
 Route::POST('/users_view/update','UsersViewController@update'); //user panel
+Route::POST('/changepass','AdminsViewController@changepass'); //change pass
 
 Route::get('/admins_view','AdminsViewController@admins_view'); //admin panel
 Route::get('/admins/delete/{id}','AdminsViewController@delete'); //message delete

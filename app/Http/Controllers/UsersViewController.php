@@ -20,6 +20,6 @@ class UsersViewController extends Controller
 	  \DB::table('users')
             ->where('email', $request->email)
             ->update(['fname' => $request->fname,'lname' => $request->lname,'number' => $request->tel,'division' => $request->division, 'weight'=> $request->weigth,'lastdonate' => $request->last_donate]);
-		return redirect()->back();
+		return redirect()->back()->with('message','data updated');
     }
 }

@@ -985,7 +985,9 @@ span{
 					ADMIN VIEW
 ============================================================*/
 
-
+#change_pass_sec{
+	display: none;
+}
 .admin_view_area {
 	background-color: black;
 	border-top: 1px solid gray;
