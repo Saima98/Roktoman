@@ -17,8 +17,14 @@ class SearchViewController extends Controller
     	// if($request->division==NULL)
     	// 	echo "NULL";
 
-    	$raw=\DB::table('users')->where('bloodgroup', '=', $bloodtype, 'AND', 'division', '=', $division)->get();
+    	//$raw=\DB::table('users')->where('bloodgroup', '=', $bloodtype, ' AND ', 'division', '=', $division)->get();
 
+
+        $raw = \DB::table('users')
+        ->where([['bloodgroup', '=', $bloodtype],
+                 ['division', '=', $division],])
+        ->orderBy('lastdonate','ASC')
+        ->get();                
     	// $count=count($raw);
     	// echo $count;
     	
@@ -26,6 +32,6 @@ class SearchViewController extends Controller
     	// 	echo $data->fname;
     	// 	# code...
     	// }
-		return view('frontView.home.search_view',compact('raw'));
+		return view('frontView.home.search_view',compact('raw','bloodtype'));
 	}
 }

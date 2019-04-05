@@ -45,6 +45,6 @@ class LoginController extends Controller
 
 	public function logout(Request $request){
 		$request->session()->flush();
-		return view('frontView.home.login');
+		return view('frontView.home.homeContent');
 	}	
 }

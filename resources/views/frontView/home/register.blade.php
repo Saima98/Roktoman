@@ -37,7 +37,7 @@
 							<small id="passwordHelpBlock" class="form-text text-muted">
 							Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 							</small>
-							<input type="password" name="password" placeholder="confirm password" required>
+							<input type="password" name="confirmpassword" placeholder="confirm password" required>
 							<div class="division">
 								<label for="sel1">division:</label>
 								<select class="" id="" name="division" required>

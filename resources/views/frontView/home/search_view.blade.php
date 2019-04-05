@@ -1,3 +1,8 @@
+<?php
+use Carbon\Carbon;
+$today=Carbon::now()->toDateTimeString();
+?>
+
 @extends('frontView.master')
 
 @section('title_area')
@@ -16,7 +21,7 @@
 		<section class="search_view_area">
 			<div class="container-fluid">
 				<div class="hello_massage">
-					<h1>hello user!<br/>there is the list of <?php echo $raw[0]->bloodgroup; ?> donors</h1>
+					<h1>hello user!<br/>there is the list of <?php echo $bloodtype; ?> donors</h1>
 				</div>
 				<div class="panel-body">
 					<form action="#">
@@ -27,6 +32,7 @@
 								<th>phone number</th>
 								<th>email</th>
 								<th>adrees</th>
+								<th>Last Donate</th>
 							</tr>
 							<?php $sr=1;
 							foreach ($raw as $data):
@@ -37,6 +43,14 @@
 								<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
 								<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 								<td><i class="fa fa-map-marker" aria-hidden="true"></i>{{$data->division}}</td>
+								<td>@if($data->lastdonate==NULL) 
+										{{"Never"}}
+									@else
+										<p style="color:red"> {{$data->lastdonate}}</p>
+									    <p style="color:blue"> {{Carbon::parse($data->lastdonate)->diffInDays($today)." Days Ago"}} </p>
+									
+									@endif 
+								</td>
 							</tr>
 							<?php 
 							  $sr++;
