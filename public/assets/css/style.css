@@ -864,6 +864,7 @@ span{
 
 .users_view_area{
 	background-color: #edecec;
+	min-height: 700px;
 }
 .users_view_left {
 	margin-top: 68px;
@@ -891,6 +892,7 @@ span{
 .users_view_right_info{
 	background-color: white;
 	border-left: 1px solid gray;
+	min-height: 700px;
 }
 .users_view_right_info table tr td {
 	padding-left: 35px;
@@ -973,13 +975,19 @@ span{
 .users_view_right_posts table tr td a:hover {
 	color: #e60d0d;
 }
+.submit input[type="submit"]{
+	padding: 10px 40px;
+	border: 1px;
+}
 
 
 /*===========================================================
 					ADMIN VIEW
 ============================================================*/
 
-
+#change_pass_sec{
+	display: none;
+}
 .admin_view_area {
 	background-color: black;
 	border-top: 1px solid gray;

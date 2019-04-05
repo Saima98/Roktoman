@@ -90,6 +90,7 @@ use Illuminate\Http\Request;
 							<div class="users_info" id="users_info">
 								<div class="hello_massage">
 									<h1>Hello Admin {{$fname.' '.$lname}} !</h1>
+									<h3 style="color:red;text-align: center">{{Session::get('message')}}</h3>
 								</div>
 								<table class="table table-dark table-striped">
 									<tr>
@@ -132,69 +133,56 @@ use Illuminate\Http\Request;
 								<div class="update">
 									<a id="update" href="#" class="box_bttn">update</a>
 								</div>
+								<div class="update">
+									<a id="change_pass" href="#" class="box_bttn">change password</a>
+								</div>
 							</div>
 							<div class="update_sec" id="update_sec">
-								<div class="back_cross" id="back_cross">
+								<div class="back_cross" id="change_back_cross">
 									<i class="fas fa-times"></i>
 								</div>
 								<div class="row">
 									<div class="col-10 mx-auto">
-										<form class="update_form" action="#">
+										<form class="update_form" action="{{url('/users_view/update')}}" method="post" enctype="multipart/form-data">
+										@csrf
 											<div class="form_input">
-												<label for="name">Your name:</label>
-												<input type="text" class="form-control" id="name">
+												<label for="name">First name:</label>
+												<input type="text" class="form-control" name="fname" id="fname" value="{{$fname}}">
 											</div>
 											<div class="form_input">
-												<label for="email">Email address:</label>
-												<input type="email" class="form-control" id="email">
+												<label for="name">Last name:</label>
+												<input type="text" class="form-control" name="lname" id="fname" value="{{$lname}}">
 											</div>
 											<div class="form_input">
 												<label for="tel">Phone number:</label>
-												<input type="tel" class="form-control" id="tel">
+												<input type="tel" class="form-control" name="tel" id="tel" value="{{$number}}">
 											</div>
 											<div class="form-group form_input">
 												<label for="email">Division:</label>
-												<select class="form-control" id="" required>
-													<option>Barisal </option>
-													<option>Chittagong </option>
-													<option>Dhaka </option>
-													<option>Khulna </option>
-													<option>Mymensingh </option>
-													<option>Rajshahi </option>
-													<option>Sylhet </option>
+												<select class="form-control" id=""  name="division" value="{{$division}}" required>
+													<option value="Barisal">Barisal </option>
+													<option value="Chittagong">Chittagong </option>
+													<option value="Dhaka">Dhaka </option>
+													<option value="Khulna">Khulna </option>
+													<option value="Mymensingh">Mymensingh </option>
+													<option value="Rajshahi">Rajshahi </option>
+													<option value="Sylhet">Sylhet </option>
 												</select>
-											</div>
-											<div class="form_input">
-												<label for="birthday">Birthday:</label>
-												<input type="date" class="form-control" id="birthday">
 											</div>
 											<div class="form_input">
 												<label for="weidth">Weidth:</label>
-												<input type="int" class="form-control" id="weidth">
-											</div>
-											<div class="form-group form_input">
-												<label for="bloodGroup">Blood group:</label>
-												<select class="form-control" id="">
-													<option>A+</option>
-													<option>B+</option>
-													<option>O+</option>
-													<option>AB+</option>
-													<option>A-</option>
-													<option>B-</option>
-													<option>O-</option>
-													<option>AB-</option>
-												</select>
+												<input type="int" class="form-control" id="weigth" name="weigth" value="{{$weight}}">
 											</div>
 											<div class="form_input">
 												<label for="lastDonate">Last donate:</label>
-												<input type="date" class="form-control" id="last_donate">
+												<input type="date" class="form-control" id="last_donate" name="last_donate" value="{{$lastdonate}}">
 											</div>
 											<!-- <div class="form_input radio_input">
 												<label class=""><input type="radio" name="optradio" checked>Male</label>
 												<label class=""><input type="radio" name="optradio">Female</label>
 												<label class=""><input type="radio" name="optradio">Other</label>
 											</div> -->
-											<div class="form_input">
+											<!-- <div class="form_input">
 												<label for="old-pass">Old password:</label>
 												<input type="password" class="form-control" id="">
 											</div>
@@ -205,14 +193,46 @@ use Illuminate\Http\Request;
 											<div class="form_input">
 												<label for="matchPass">Confirm-password:</label>
 												<input type="password" class="form-control" id="">
+											</div> -->
+											<input type="email" name="email" value="{{$email}}">
+											<div class="submit">
+												<input type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
-										<div class="update">
-											<a href="#" class="box_bttn">update</a>
-										</div>
 									</div>
 								</div>
 							</div>
+							<div class="update_sec" id="change_pass_sec">
+								<div class="back_cross" id="back_cross">
+									<i class="fas fa-times"></i>
+								</div>
+								<div class="row">
+									<div class="col-10 mx-auto">
+										<form class="update_form" action="{{url('/changepass')}}" method="post" enctype="multipart/form-data">
+										@csrf
+											<div class="form_input">
+												<label for="old-pass">Old password:</label>
+												<input type="password" class="form-control" name="oldpass" id="" required>
+											</div>
+											<div class="form_input">
+												<label for="newPass">New password:</label>
+												<input type="password" class="form-control" name="newpass" id="" required>
+											</div>
+											<div class="form_input">
+												<label for="matchPass">Confirm-password:</label>
+												<input type="password" class="form-control" name="confirmpass" id="" required>
+											</div>
+											<input type="email" name="email" value="{{$email}}">
+											<div class="submit">
+												<input type="submit" class="box_bttn" value="change password">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							
+							
+							
 						</div>
 						<div class="users_view_right_posts" id="users_view_right_posts">
 							<div class="hello_massage">
@@ -293,7 +313,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="#">make admin</a></td>
+									<td><a class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -321,7 +341,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="#">remove admin</a></td>
+									<td><a class="delete_btn" href="{{url('/admins/removeAdmin',$data->id) }}">remove admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -380,10 +400,22 @@ use Illuminate\Http\Request;
 				$("#update").click(function(){
 					$("#update_sec").show();
 					$("#users_info").hide();
+					$("#change_pass_sec").hide();
 				});
 				$("#back_cross").click(function(){
 					$("#update_sec").hide();
+					$("#change_pass_sec").hide();
 					$("#users_info").show();
+				});
+				$("#change_back_cross").click(function(){
+					$("#update_sec").hide();
+					$("#change_pass_sec").hide();
+					$("#users_info").show();
+				});
+				$("#change_pass").click(function(){
+					$("#update_sec").hide();
+					$("#users_info").hide();
+					$("#change_pass_sec").show();
 				});
 				//Active link
 				$(function(){

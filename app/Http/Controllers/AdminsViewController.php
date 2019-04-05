@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 use\App\Comment;
+use\App\User;
 
 class AdminsViewController extends Controller
 {
@@ -38,6 +40,42 @@ class AdminsViewController extends Controller
 		return view('frontView.home.admin_view',compact('admin'));
 	}*/
 	
+	//changepass
+	
+	public function changepass(Request $request){
+		$oldpass = $request->oldpass;
+		$newpass = $request->newpass;
+		$confirmpass = $request->confirmpass;
+		$email = $request->email;
+		
+		$info = \DB::table('users')->where('email','=', $email )->get();
+		$raw_count = \DB::table('users')->where('email','=', $email )->count();
+		
+		$mainpass=$info[0]->password;
+		if(Hash::check($oldpass, $mainpass))
+			{
+				if($newpass == $confirmpass)
+				{
+					$password_hash=Hash::make($newpass);
+					\DB::table('users')
+						->where('email', $email)
+						->update(['password' => $password_hash]);
+					echo "done";
+				}
+				else
+				//echo "ahem ahem";
+				return redirect('/admins_view')->with('message','confirmation password not matched');
+				
+			}
+		else
+			//echo "ahem ahem";
+			return redirect('/admins_view')->with('message','wrong password');
+    }
+	
+	
+	
+	
+	
 	public function delete($id){
 		
 		$del= Comment::find($id);
@@ -46,5 +84,25 @@ class AdminsViewController extends Controller
         return redirect()->back();
     }
 	
-
+	//makeAdmin
+	
+	public function makeAdmin($id){
+		
+		\DB::table('users')
+            ->where('id', $id)
+            ->update(['adminship' => '1']);
+		
+		return redirect('/admins_view');
+    }
+	
+	//removeAdmin
+	
+	public function removeAdmin($id){
+		
+		\DB::table('users')
+            ->where('id', $id)
+            ->update(['adminship' => '0']);
+			
+		return redirect('/admins_view');
+    }
 }
