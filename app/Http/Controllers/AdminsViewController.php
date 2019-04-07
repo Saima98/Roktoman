@@ -93,6 +93,14 @@ class AdminsViewController extends Controller
             ->update(['adminship' => '1']);
 		
 		return redirect('/admins_view');
+		
+		/*echo ("<script LANGUAGE='JavaScript'>
+    function myFunction() {
+		window.alert('Succesfully Updated');
+	}
+    </script>");*/
+	
+	
     }
 	
 	//removeAdmin

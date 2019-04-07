@@ -41,7 +41,7 @@ use Illuminate\Http\Request;
 		<section class="users_view_area">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-2">
 						<div class="users_view_left">
 							<ul>
 								<li id="my_info" class="aclive_link_user">my information</li>
@@ -49,7 +49,7 @@ use Illuminate\Http\Request;
 							</ul>
 						</div>
 					</div>
-					<div class="col-9">
+					<div class="col-10">
 						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="users_info" id="users_info">
 								<div class="hello_massage">

@@ -44,10 +44,10 @@ use Illuminate\Http\Request;
 		<section class="admin_view_area">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-2">
 						<div class="users_view_left">
 							<ul>
-								<li id="my_info">my information</li>
+								<li id="my_info" class="aclive_link_admin">my information</li>
 								<li id="blood_posts">blood posts</li>
 								<li id="users_message">users message</li>
 								<li id="all_users"> all users</li>
@@ -85,7 +85,7 @@ use Illuminate\Http\Request;
 							</ul>
 						</div>
 					</div>
-					<div class="col-9">
+					<div class="col-10">
 						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="users_info" id="users_info">
 								<div class="hello_massage">
@@ -313,7 +313,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
+									<td><a onclick="myFunction()" class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -424,6 +424,9 @@ use Illuminate\Http\Request;
 					$(this).addClass('aclive_link_admin');
 					});
 				});
+				/*function myFunction() {
+		window.alert('Succesfully Updated');
+	}*/
 			});
 		</script>
 @endsection

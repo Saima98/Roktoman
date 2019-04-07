@@ -23,6 +23,7 @@
 				<div class="col-lg-6 col-md-6 register_right">
 					<div class="heading">
 						<h2>Create an account</h2>
+						<h3 style="color:red;text-align: center">{{Session::get('message')}}</h3>
 					</div>
 					<form action="/newregistration" method="post">
 						<!-- {{ csrf_token() }} -->
