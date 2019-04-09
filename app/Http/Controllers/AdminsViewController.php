@@ -91,16 +91,12 @@ class AdminsViewController extends Controller
 		\DB::table('users')
             ->where('id', $id)
             ->update(['adminship' => '1']);
-		
+		/*echo ("<script type="javascript">
+		function myFunction() {
+			window.alert('Succesfully Updated');
+		}
+		</script>");*/
 		return redirect('/admins_view');
-		
-		/*echo ("<script LANGUAGE='JavaScript'>
-    function myFunction() {
-		window.alert('Succesfully Updated');
-	}
-    </script>");*/
-	
-	
     }
 	
 	//removeAdmin

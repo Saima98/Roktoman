@@ -196,7 +196,7 @@ use Illuminate\Http\Request;
 											</div> -->
 											<input type="email" name="email" value="{{$email}}">
 											<div class="submit">
-												<input type="submit" class="box_bttn" value="update">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
 									</div>
@@ -223,8 +223,8 @@ use Illuminate\Http\Request;
 												<input type="password" class="form-control" name="confirmpass" id="" required>
 											</div>
 											<input type="email" name="email" value="{{$email}}">
-											<div class="submit">
-												<input type="submit" class="box_bttn" value="change password">
+											<div onclick="myFunction()" class="submit">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="change password">
 											</div>
 										</form>
 									</div>
@@ -285,7 +285,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->name}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td>{{$data->message}}</td>
-									<td><a class="delete_btn" href="{{ action('AdminsViewController@delete', $data->id) }}">delete</a></td>
+									<td><a onclick="myFunction()" class="delete_btn" href="{{ action('AdminsViewController@delete', $data->id) }}">delete</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -341,7 +341,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="{{url('/admins/removeAdmin',$data->id) }}">remove admin</a></td>
+									<td><a onclick="myFunction()" class="delete_btn" href="{{url('/admins/removeAdmin',$data->id) }}">remove admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -424,9 +424,9 @@ use Illuminate\Http\Request;
 					$(this).addClass('aclive_link_admin');
 					});
 				});
-				/*function myFunction() {
-		window.alert('Succesfully Updated');
-	}*/
 			});
+			function myFunction() {
+				window.alert('Are you sure ?');
+			}
 		</script>
 @endsection

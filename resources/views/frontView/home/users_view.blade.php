@@ -159,7 +159,7 @@ use Illuminate\Http\Request;
 											</div> -->
 											<input type="email" name="email" value="{{$email}}">
 											<div class="submit">
-												<input type="submit" class="box_bttn" value="update">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
 									</div>
@@ -187,7 +187,7 @@ use Illuminate\Http\Request;
 											</div>
 											<input type="email" name="email" value="{{$email}}">
 											<div class="submit">
-												<input type="submit" class="box_bttn" value="change password">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="change password">
 											</div>
 										</form>
 									</div>
@@ -273,6 +273,8 @@ use Illuminate\Http\Request;
 				$(this).addClass('aclive_link_user');
 				});
 			});
-
+			function myFunction() {
+				window.alert('Are you sure ?');
+			}
 		</script>
 @endsection
