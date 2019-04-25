@@ -328,9 +328,6 @@ use Illuminate\Http\Request;
 						</div>
 						<div class="adding_users">
 							<div class="update_sec" id="add_users">
-								<div class="back_cross" id="change_back_cross">
-									<i class="fas fa-times"></i>
-								</div>
 								<div class="row">
 									<div class="col-10 mx-auto">
 										<form class="update_form" action="" method="post" enctype="multipart/form-data">
