@@ -76,12 +76,22 @@ class AdminsViewController extends Controller
 	
 	
 	
+	public function removeUser($id){
+		
+		\DB::table('users')
+			->where('id', $id)
+			->delete();
+		
+        return redirect()->back();
+    }
+	
+	
 	public function delete($id){
 		
 		$del= Comment::find($id);
 		$del->delete();
 		
-        return redirect()->back();
+        return redirect('/admins_view');
     }
 	
 	//makeAdmin

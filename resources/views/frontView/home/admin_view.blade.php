@@ -32,7 +32,7 @@ use Illuminate\Http\Request;
 @section('header_menu')
 	<div class="menu">
 		<ul class="nav">
-			<li class="current"><a href="#contact">profile</a></li>
+			<li class="current"><a href="/admins_view">profile</a></li>
 		</ul>
 	</div>
 	<div class="menu_link">
@@ -44,7 +44,7 @@ use Illuminate\Http\Request;
 		<section class="admin_view_area">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-2">
+					<div class="col-lg-2 col-md-3 col-sm-2">
 						<div class="users_view_left">
 							<ul>
 								<li id="my_info" class="aclive_link_admin">my information</li>
@@ -52,40 +52,10 @@ use Illuminate\Http\Request;
 								<li id="users_message">users message</li>
 								<li id="all_users"> all users</li>
 								<li id="admins"> all admins</li>
-								<li data-toggle="modal" data-target="#myModal">search anybody</li>
-								<!-- The Modal -->
-								<div class="modal" id="myModal">
-									<div class="modal-dialog">
-										<div class="modal-content">
-									  
-										<!-- Modal Header -->
-										<div class="modal-header">
-										  <h4 class="modal-title">Modal Heading</h4>
-										  <button type="button" class="close" data-dismiss="modal">&times;</button>
-										</div>
-										
-										<!-- Modal body -->
-										<div class="modal-body">
-											<form action="#">
-												<div class="form-group">
-													<input type="email" name="email" placeholder="email address" required>
-													<input class="btn btn-danger" type="submit" value="sign up">
-												</div>
-											</form>
-										</div>
-										
-										<!-- Modal footer -->
-										<div class="modal-footer">
-										  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-										</div>
-										
-									  </div>
-									</div>
-								</div>
 							</ul>
 						</div>
 					</div>
-					<div class="col-10">
+					<div class="col-lg-10 col-md-9 col-sm-10">
 						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="users_info" id="users_info">
 								<div class="hello_massage">
@@ -304,6 +274,7 @@ use Illuminate\Http\Request;
 									<th>email</th>
 									<th>number</th>
 									<th></th>
+									<th></th>
 								</tr>
 								<?php $sr=1;
 									foreach ($users as $data):
@@ -313,7 +284,12 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
+									<td><a onclick="myFunction()" class="remove_btn" href="{{url('/admins/removeUser',$data->id) }}">remove</a></td>
+								@if($data->adminship == 1)
+									<td></td>
+								@else
 									<td><a onclick="myFunction()" class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
+								@endif
 								</tr>
 								<?php 
 							  		$sr++;

@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-lg-2 col-md-1 col-sm-1">
 					<div class="logo">
-						<a href="home"><span>rokto</span>man</a>
+						<a href="home">bl<span>oo</span>dman</a>
 					</div>
 				</div>
 				<div class="col-lg-10 col-md-11 col-sm-11">

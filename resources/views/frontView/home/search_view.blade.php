@@ -20,9 +20,15 @@ $today=Carbon::now()->toDateTimeString();
 @section('home_body')
 		<section class="search_view_area">
 			<div class="container-fluid">
+			@if(isset($email))
 				<div class="hello_massage">
 					<h1>hello user!<br/>there is the list of <?php echo $bloodtype; ?> donors</h1>
 				</div>
+			@else
+				<div class="hello_massage">
+					<h1>opps!<br/>there is no <?php echo $bloodtype; ?> donors available yet.</h1>
+				</div>
+			@endif
 				<div class="panel-body">
 					<form action="#">
 						<table class="table table-bordered table-striped">
@@ -46,8 +52,8 @@ $today=Carbon::now()->toDateTimeString();
 								<td>@if($data->lastdonate==NULL) 
 										{{"Never"}}
 									@else
-										<p style="color:red"> {{$data->lastdonate}}</p>
-									    <p style="color:blue"> {{Carbon::parse($data->lastdonate)->diffInDays($today)." Days Ago"}} </p>
+										<p style="color:red; font-size:16px;"> {{$data->lastdonate}}</br>
+									    <span style="color:blue; font-size:12px;"> {{Carbon::parse($data->lastdonate)->diffInDays($today)." Days Ago"}} </span></p>
 									
 									@endif 
 								</td>
