@@ -1046,6 +1046,9 @@ span{
 #change_pass_sec{
 	display: none;
 }
+#add_users{
+	display: none;
+}
 .admin_view_area {
 	background-color: black;
 	border-top: 1px solid gray;
@@ -1093,6 +1096,10 @@ span{
 }
 #myModal {
 	margin-top: 100px;
+}
+.adding_users{
+	border-left: 1px solid gray;
+	background-color: #212529;
 }
 .delete_btn {
 	background-color: #e60d0d;
