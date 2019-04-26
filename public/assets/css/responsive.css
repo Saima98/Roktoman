@@ -139,29 +139,29 @@
 		padding: 100px 60px 0 60px;
 	}
 	.single_item_link {
-	margin-bottom: 30px;
-}
-.single_who_can {
-	padding: 38px 23px;
-}
-.contact_adress h2 {
-	margin-left: 0;
-}
-.contact_adress ul {
-	margin-left: 0;
-}
-.contact_form h2 {
-	padding: 15px 0;
-	font-size: 28px;
-}
-.contact_form form input[type="text"] {
-	width: 100%;
-}
-.contact_form form input[type="email"] {
-	width: 100%;
-	margin-top: 10px;
-	margin-left: 0;
-}
+		margin-bottom: 30px;
+	}
+	.single_who_can {
+		padding: 38px 23px;
+	}
+	.contact_adress h2 {
+		margin-left: 0;
+	}
+	.contact_adress ul {
+		margin-left: 0;
+	}
+	.contact_form h2 {
+		padding: 15px 0;
+		font-size: 28px;
+	}
+	.contact_form form input[type="text"] {
+		width: 100%;
+	}
+	.contact_form form input[type="email"] {
+		width: 100%;
+		margin-top: 10px;
+		margin-left: 0;
+	}
 	
 	
 	
@@ -225,6 +225,15 @@
 		margin: 54px 8px;
 	}
 
+	
+	/*Admin View*/
+	
+	.users_view_right_posts table tr th{
+		display: none;
+	}
+	.users_view_right_posts table tr td{
+		display: block;
+	}
 	
 }
 
@@ -312,6 +321,15 @@
 		display: none;
 	}
 	
+	/*Admin View*/
+	
+	.users_view_right_posts table tr th{
+		display: none;
+	}
+	.users_view_right_posts table tr td{
+		display: block;
+	}
+	
 }
 
 
@@ -396,6 +414,20 @@
 	}
 	.search_right {
 		padding: 100px 10px;
+	}
+	
+	
+	/*Admin View*/
+	
+	
+	.users_view_right_info table tr td{
+		display: block;
+	}
+	.users_view_right_posts table tr th{
+		display: none;
+	}
+	.users_view_right_posts table tr td{
+		display: block;
 	}
 	
 }

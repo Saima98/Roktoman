@@ -42,7 +42,11 @@ class RegisterController extends Controller
       // changes ends //
       // if($password!=$cofirmpassword)
       //    return redirect('/newregistration')->with('message','confirmation password not matched');
-      $division = $request->division;
+      
+	  
+	  if($password == $cofirmpassword)
+	  {
+	  $division = $request->division;
       $weight = $request->input('weight');
       $number = $request->input('phone');
       $DOB = $request->input('DOB');
@@ -59,5 +63,9 @@ class RegisterController extends Controller
 		return view('frontView.home.login');
       //echo "Record inserted successfully.<br/>";
       //echo '<a href = "/insert">Click Here</a> to go back.';
+	}
+	else
+		//echo "wrong pass";
+		return redirect('/register')->with('message','confirmation password not matched');
    }
 }

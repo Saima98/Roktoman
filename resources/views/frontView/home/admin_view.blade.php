@@ -32,7 +32,7 @@ use Illuminate\Http\Request;
 @section('header_menu')
 	<div class="menu">
 		<ul class="nav">
-			<li class="current"><a href="#contact">profile</a></li>
+			<li class="current"><a href="/admins_view">profile</a></li>
 		</ul>
 	</div>
 	<div class="menu_link">
@@ -44,48 +44,19 @@ use Illuminate\Http\Request;
 		<section class="admin_view_area">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-lg-2 col-md-3 col-sm-2">
 						<div class="users_view_left">
 							<ul>
-								<li id="my_info">my information</li>
+								<li id="my_info" class="aclive_link_admin">my information</li>
 								<li id="blood_posts">blood posts</li>
 								<li id="users_message">users message</li>
 								<li id="all_users"> all users</li>
 								<li id="admins"> all admins</li>
-								<li data-toggle="modal" data-target="#myModal">search anybody</li>
-								<!-- The Modal -->
-								<div class="modal" id="myModal">
-									<div class="modal-dialog">
-										<div class="modal-content">
-									  
-										<!-- Modal Header -->
-										<div class="modal-header">
-										  <h4 class="modal-title">Modal Heading</h4>
-										  <button type="button" class="close" data-dismiss="modal">&times;</button>
-										</div>
-										
-										<!-- Modal body -->
-										<div class="modal-body">
-											<form action="#">
-												<div class="form-group">
-													<input type="email" name="email" placeholder="email address" required>
-													<input class="btn btn-danger" type="submit" value="sign up">
-												</div>
-											</form>
-										</div>
-										
-										<!-- Modal footer -->
-										<div class="modal-footer">
-										  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-										</div>
-										
-									  </div>
-									</div>
-								</div>
+								<li id="add"> add users</li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-9">
+					<div class="col-lg-10 col-md-9 col-sm-10">
 						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="users_info" id="users_info">
 								<div class="hello_massage">
@@ -194,9 +165,9 @@ use Illuminate\Http\Request;
 												<label for="matchPass">Confirm-password:</label>
 												<input type="password" class="form-control" id="">
 											</div> -->
-											<input type="email" name="email" value="{{$email}}">
+											<input type="hidden" name="email" value="{{$email}}">
 											<div class="submit">
-												<input type="submit" class="box_bttn" value="update">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
 									</div>
@@ -223,8 +194,8 @@ use Illuminate\Http\Request;
 												<input type="password" class="form-control" name="confirmpass" id="" required>
 											</div>
 											<input type="email" name="email" value="{{$email}}">
-											<div class="submit">
-												<input type="submit" class="box_bttn" value="change password">
+											<div onclick="myFunction()" class="submit">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="change password">
 											</div>
 										</form>
 									</div>
@@ -285,7 +256,7 @@ use Illuminate\Http\Request;
 									<td>{{$data->name}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td>{{$data->message}}</td>
-									<td><a class="delete_btn" href="{{ action('AdminsViewController@delete', $data->id) }}">delete</a></td>
+									<td><a onclick="myFunction()" class="delete_btn" href="{{ action('AdminsViewController@delete', $data->id) }}">delete</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
@@ -304,6 +275,7 @@ use Illuminate\Http\Request;
 									<th>email</th>
 									<th>number</th>
 									<th></th>
+									<th></th>
 								</tr>
 								<?php $sr=1;
 									foreach ($users as $data):
@@ -313,7 +285,12 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
+									<td><a onclick="myFunction()" class="remove_btn" href="{{url('/admins/removeUser',$data->id) }}">remove</a></td>
+								@if($data->adminship == 1)
+									<td></td>
+								@else
+									<td><a onclick="myFunction()" class="delete_btn" href="{{url('/admins/makeAdmin',$data->id) }}">make admin</a></td>
+								@endif
 								</tr>
 								<?php 
 							  		$sr++;
@@ -341,13 +318,89 @@ use Illuminate\Http\Request;
 									<td>{{$data->fname}} {{$data->lname}}</td>
 									<td class="text_transform_none"><a href="mailto:support@info.com"><i class="fa fa-envelope" aria-hidden="true"></i>{{$data->email}}<a/></td>
 									<td><a href="tel:+(07) 012345678"><i class="fa fa-phone" aria-hidden="true"></i>{{$data->number}}<a/></td>
-									<td><a class="delete_btn" href="{{url('/admins/removeAdmin',$data->id) }}">remove admin</a></td>
+									<td><a onclick="myFunction()" class="delete_btn" href="{{url('/admins/removeAdmin',$data->id) }}">remove admin</a></td>
 								</tr>
 								<?php 
 							  		$sr++;
 							  		endforeach;
 								?>
 							</table>
+						</div>
+						<div class="adding_users">
+							<div class="update_sec" id="add_users">
+								<div class="row">
+									<div class="col-10 mx-auto">
+										<form class="update_form" action="" method="post" enctype="multipart/form-data">
+										@csrf
+											<div class="form_input">
+												<label for="name">First name:</label>
+												<input type="text" class="form-control" name="fname" id="fname">
+											</div>
+											<div class="form_input">
+												<label for="name">Last name:</label>
+												<input type="text" class="form-control" name="lname" id="fname">
+											</div>
+											<div class="form_input">
+												<label for="name">Email:</label>
+												<input type="email" class="form-control" name="email" id="email">
+											</div>
+											<div class="form_input">
+												<label for="tel">Phone number:</label>
+												<input type="tel" class="form-control" name="tel" id="tel">
+											</div>
+											<div class="form-group form_input">
+												<label for="email">Division:</label>
+												<select class="form-control" id=""  name="division" required>
+													<option value="Barisal">Barisal </option>
+													<option value="Chittagong">Chittagong </option>
+													<option value="Dhaka">Dhaka </option>
+													<option value="Khulna">Khulna </option>
+													<option value="Mymensingh">Mymensingh </option>
+													<option value="Rajshahi">Rajshahi </option>
+													<option value="Sylhet">Sylhet </option>
+												</select>
+											</div>
+											<div class="form-group form_input">
+												<label for="bloodGroup">blood group:</label>
+												<select class="form-control" id="" name="bloodgroup" required>
+													<option value="A+">A+</option>
+													<option value="B+">B+</option>
+													<option value="O+">O+</option>
+													<option value="AB+">AB+</option>
+													<option value="A">A-</option>
+													<option value="B-">B-</option>
+													<option value="O-">O-</option>
+													<option value="AB-">AB-</option>
+												</select>
+											</div>
+											<div class="form_input">
+												<label for="lastDonate">Last donate:</label>
+												<input type="date" class="form-control" id="last_donate" name="last_donate">
+											</div>
+											<div class="form_input">
+												<label for="newPass">New password:</label>
+												<input type="password" class="form-control" id="">
+											</div>
+											<div class="form_input">
+												<label for="matchPass">Confirm-password:</label>
+												<input type="password" class="form-control" id="">
+											</div>
+											<div class="form_input">
+												<label for="weidth">Weidth:</label>
+												<input type="int" class="form-control" id="weigth" name="weigth">
+											</div>
+											<div class="form_input radio_input">
+												<label class=""><input type="radio" name="optradio" checked>Male</label>
+												<label class=""><input type="radio" name="optradio">Female</label>
+												<label class=""><input type="radio" name="optradio">Other</label>
+											</div>
+											<div class="submit">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="add">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -367,6 +420,7 @@ use Illuminate\Http\Request;
 					$("#admin_view_users_message").hide();
 					$("#all_users_data").hide();
 					$("#all_admin").hide();
+					$("#add_users").hide();
 					$("#users_view_right_info").show();
 				});
 				$("#blood_posts").click(function(){
@@ -375,12 +429,14 @@ use Illuminate\Http\Request;
 					$("#admin_view_users_message").hide();
 					$("#all_users_data").hide();
 					$("#all_admin").hide();
+					$("#add_users").hide();
 				});
 				$("#users_message").click(function(){
 					$("#users_view_right_posts").hide();
 					$("#users_view_right_info").hide();
 					$("#all_users_data").hide();
 					$("#all_admin").hide();
+					$("#add_users").hide();
 					$("#admin_view_users_message").show();
 				});
 				$("#all_users").click(function(){
@@ -388,6 +444,7 @@ use Illuminate\Http\Request;
 					$("#users_view_right_info").hide();
 					$("#admin_view_users_message").hide();
 					$("#all_admin").hide();
+					$("#add_users").hide();
 					$("#all_users_data").show();
 				});
 				$("#admins").click(function(){
@@ -395,7 +452,16 @@ use Illuminate\Http\Request;
 					$("#users_view_right_info").hide();
 					$("#admin_view_users_message").hide();
 					$("#all_users_data").hide();
+					$("#add_users").hide();
 					$("#all_admin").show();
+				});
+				$("#add").click(function(){
+					$("#users_view_right_posts").hide();
+					$("#users_view_right_info").hide();
+					$("#admin_view_users_message").hide();
+					$("#all_users_data").hide();
+					$("#all_admin").hide();
+					$("#add_users").show();
 				});
 				$("#update").click(function(){
 					$("#update_sec").show();
@@ -425,5 +491,8 @@ use Illuminate\Http\Request;
 					});
 				});
 			});
+			function myFunction() {
+				window.alert('Are you sure ?');
+			}
 		</script>
 @endsection

@@ -89,6 +89,7 @@ Route::POST('/changepass','AdminsViewController@changepass'); //change pass
 
 Route::get('/admins_view','AdminsViewController@admins_view'); //admin panel
 Route::get('/admins/delete/{id}','AdminsViewController@delete'); //message delete
+Route::get('/admins/removeUser/{id}','AdminsViewController@removeUser'); //remove user
 Route::get('/admins/makeAdmin/{id}','AdminsViewController@makeAdmin'); //make admin
 Route::get('/admins/removeAdmin/{id}','AdminsViewController@removeAdmin'); //remove admin
 

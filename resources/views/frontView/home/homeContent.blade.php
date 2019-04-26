@@ -51,7 +51,7 @@ use Illuminate\Http\Request;
 				</div>
 			</div>
 		</section>
-		<section id="why_give" class="all_item_link_area">
+		<!--<section id="why_give" class="all_item_link_area">
 			<div class="all_item_link">
 				<div class="container">
 					<div class="row">
@@ -83,13 +83,13 @@ use Illuminate\Http\Request;
 								<h2>Search for  donar</h2>
 								<i class="fas fa-search-plus"></i>
 								<!--<input class="link" type="submit" value="search"/>-->
-								<a class="link" href="#">sgin up</a>
+								<!--<a class="link" href="#">sgin up</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<section id="who_can_give" class="who_can_donate_area">
 			<div class="who_can_donate ptb-100">
 				<div class="container">

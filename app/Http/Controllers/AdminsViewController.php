@@ -76,12 +76,22 @@ class AdminsViewController extends Controller
 	
 	
 	
+	public function removeUser($id){
+		
+		\DB::table('users')
+			->where('id', $id)
+			->delete();
+		
+        return redirect()->back();
+    }
+	
+	
 	public function delete($id){
 		
 		$del= Comment::find($id);
 		$del->delete();
 		
-        return redirect()->back();
+        return redirect('/admins_view');
     }
 	
 	//makeAdmin
@@ -91,7 +101,11 @@ class AdminsViewController extends Controller
 		\DB::table('users')
             ->where('id', $id)
             ->update(['adminship' => '1']);
-		
+		/*echo ("<script type="javascript">
+		function myFunction() {
+			window.alert('Succesfully Updated');
+		}
+		</script>");*/
 		return redirect('/admins_view');
     }
 	

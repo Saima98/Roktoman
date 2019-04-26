@@ -29,7 +29,7 @@ use Illuminate\Http\Request;
 @section('header_menu')
 	<div class="menu">
 		<ul class="nav">
-			<li class="current"><a href="#contact">profile</a></li>
+			<li class="current"><a href="/users_view">profile</a></li>
 		</ul>
 	</div>
 	<div class="menu_link">
@@ -41,7 +41,7 @@ use Illuminate\Http\Request;
 		<section class="users_view_area">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-lg-2 col-md-3 col-sm-2">
 						<div class="users_view_left">
 							<ul>
 								<li id="my_info" class="aclive_link_user">my information</li>
@@ -49,7 +49,7 @@ use Illuminate\Http\Request;
 							</ul>
 						</div>
 					</div>
-					<div class="col-9">
+					<div class="col-lg-10 col-md-9 col-sm-10">
 						<div class="users_view_right_info" id="users_view_right_info">
 							<div class="users_info" id="users_info">
 								<div class="hello_massage">
@@ -159,7 +159,7 @@ use Illuminate\Http\Request;
 											</div> -->
 											<input type="email" name="email" value="{{$email}}">
 											<div class="submit">
-												<input type="submit" class="box_bttn" value="update">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="update">
 											</div>
 										</form>
 									</div>
@@ -187,7 +187,7 @@ use Illuminate\Http\Request;
 											</div>
 											<input type="email" name="email" value="{{$email}}">
 											<div class="submit">
-												<input type="submit" class="box_bttn" value="change password">
+												<input onclick="myFunction()" type="submit" class="box_bttn" value="change password">
 											</div>
 										</form>
 									</div>
@@ -273,6 +273,8 @@ use Illuminate\Http\Request;
 				$(this).addClass('aclive_link_user');
 				});
 			});
-
+			function myFunction() {
+				window.alert('Are you sure ?');
+			}
 		</script>
 @endsection
