@@ -11,18 +11,22 @@
 @section('header_menu')
 	<div class="menu">
 		<ul class="nav">
-			<li class="current"><a href="#home">home</a></li>
-			<li class="current"><a href="#why_give">why give blood</a></li>
-			<li class="current"><a href="#who_can_give">who can give blood</a></li>
-			<li class="current"><a href="#achievement">achievement</a></li>
-			<li class="current"><a href="#contact">contact</a></li>
-		</ul>
-	</div>
-	<div class="menu_link">
+			<li class="scroll active"><a href="#home">home</a></li>
+			<li class="scroll"><a href="#who_can_give">who can give blood</a></li>
+			<li class="scroll"><a href="#achievement">achievement</a></li>
+			<li class="scroll"><a href="#contact">contact</a></li>
 <?php
 use Illuminate\Http\Request;
 	$email=session()->get('email');
 ?>
+			@if(isset($email))
+			<li class="current"><a href="/admins_view">profile</a></li>
+			@else
+				
+			@endif
+		</ul>
+	</div>
+	<div class="menu_link">
 		@if(isset($email))
 		<a href="/logout" class="link">log out <i class="fas fa-sign-out-alt"></i></a>
 		@else
@@ -255,6 +259,21 @@ use Illuminate\Http\Request;
 		<script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.smoothscroll.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/main.js"></script>
+		
+		<script type="text/javascript">
+			//smoth scrolling
+			$(function() {
+			$('.scroll').smoothScroll(800);
+			});
+			//Active link
+			$(function(){
+				$('.menu li').click(function () {
+				$('.menu li').removeClass('active');
+				$(this).addClass('active');
+				});
+			});
+		</script>
 @endsection

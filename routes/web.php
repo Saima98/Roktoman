@@ -92,6 +92,7 @@ Route::get('/admins/delete/{id}','AdminsViewController@delete'); //message delet
 Route::get('/admins/removeUser/{id}','AdminsViewController@removeUser'); //remove user
 Route::get('/admins/makeAdmin/{id}','AdminsViewController@makeAdmin'); //make admin
 Route::get('/admins/removeAdmin/{id}','AdminsViewController@removeAdmin'); //remove admin
+Route::POST('adduser','AdminsViewController@insert'); //add user
 
 // End of User/Admin Panel Controller //
 

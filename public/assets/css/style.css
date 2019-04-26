@@ -114,10 +114,15 @@ span{
 .menu ul li a{
 	color: white;
 	text-transform: capitalize;
+	text-decoration: none;
 }
-.menu ul li a.active{
+.menu ul li a:hover{
+	color: #e60d0d;
+	font-weight: bold;
+}
+/*.menu ul li a.active{
    color: #e60d0d !important; 
-}
+}*/
 .link {
 	background-color: green;
 	text-transform: capitalize;
@@ -139,7 +144,10 @@ span{
 }
 .menu_link a{}
 .menu_link a i{}
-
+.active{
+	font-weight: bold;
+	color: #e60d0d !important;
+}
 /*.header_area{
 	color: white;
 	width: 100%;
@@ -608,6 +616,10 @@ span{
 	text-transform: capitalize;
 	border: 1px solid #f0aea2;
 }
+.form-group input[type="int"] {
+	margin-top: 41px;
+	margin-right: 17px;
+}
 .form-group input[type="email"], .form-group input[type="tel"], .form-group input[type="password"] {
 	width: 100%;
 	text-transform: capitalize;
@@ -658,16 +670,14 @@ span{
 .radio_input_status label {
 	display: block;
 	overflow: hidden;
-	padding-left: 20px;
-	padding-bottom: 15px;
 }
 .radio_input_gender {
 	width: 100%;
 	margin-bottom: 50px;
 	overflow: hidden;
+	padding-top: 30px;
 }
 #status_yes {
-	margin-left: 20px;
 }
 .donate_last_date {
 	width: 100%;

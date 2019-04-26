@@ -32,7 +32,7 @@ use Illuminate\Http\Request;
 @section('header_menu')
 	<div class="menu">
 		<ul class="nav">
-			<li class="current"><a href="/admins_view">profile</a></li>
+			<li class="current"><a href="/">home</a></li>
 		</ul>
 	</div>
 	<div class="menu_link">
@@ -330,7 +330,7 @@ use Illuminate\Http\Request;
 							<div class="update_sec" id="add_users">
 								<div class="row">
 									<div class="col-10 mx-auto">
-										<form class="update_form" action="" method="post" enctype="multipart/form-data">
+										<form class="update_form" action="/adduser" method="post" enctype="multipart/form-data">
 										@csrf
 											<div class="form_input">
 												<label for="name">First name:</label>
@@ -338,7 +338,7 @@ use Illuminate\Http\Request;
 											</div>
 											<div class="form_input">
 												<label for="name">Last name:</label>
-												<input type="text" class="form-control" name="lname" id="fname">
+												<input type="text" class="form-control" name="lname" id="lname">
 											</div>
 											<div class="form_input">
 												<label for="name">Email:</label>
@@ -374,25 +374,29 @@ use Illuminate\Http\Request;
 												</select>
 											</div>
 											<div class="form_input">
+												<label for="lastDonate">Date of birth:</label>
+												<input type="date" class="form-control" id="last_donate" name="DOB">
+											</div>
+											<div class="form_input">
 												<label for="lastDonate">Last donate:</label>
 												<input type="date" class="form-control" id="last_donate" name="last_donate">
 											</div>
 											<div class="form_input">
 												<label for="newPass">New password:</label>
-												<input type="password" class="form-control" id="">
+												<input type="password" class="form-control" name="password" id="">
 											</div>
 											<div class="form_input">
 												<label for="matchPass">Confirm-password:</label>
-												<input type="password" class="form-control" id="">
+												<input type="password" class="form-control" name="confirmpassword" id="">
 											</div>
 											<div class="form_input">
 												<label for="weidth">Weidth:</label>
 												<input type="int" class="form-control" id="weigth" name="weigth">
 											</div>
 											<div class="form_input radio_input">
-												<label class=""><input type="radio" name="optradio" checked>Male</label>
-												<label class=""><input type="radio" name="optradio">Female</label>
-												<label class=""><input type="radio" name="optradio">Other</label>
+												<label class=""><input type="radio" value="male" name="gender" checked>Male</label>
+												<label class=""><input type="radio" value="female" name="gender">Female</label>
+												<label class=""><input type="radio" value="other" name="gender">Other</label>
 											</div>
 											<div class="submit">
 												<input onclick="myFunction()" type="submit" class="box_bttn" value="add">

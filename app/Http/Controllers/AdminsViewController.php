@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
 
 use\App\Comment;
 use\App\User;
@@ -119,4 +121,38 @@ class AdminsViewController extends Controller
 			
 		return redirect('/admins_view');
     }
+	
+	
+	//ads user
+	public function insert(Request $request) {
+		$firstname = $request->input('fname');
+		$lastname = $request->input('lname');
+		$email = $request->input('email');
+		$password = $request->input('password');
+		$cofirmpassword= $request->input('confirmpassword');
+		if($password == $cofirmpassword)
+		{
+		$division = $request->division;
+		$weight = $request->input('weigth');
+		$number = $request->input('tel');
+		$DOB = $request->input('DOB');
+		$bloodgroup = $request->bloodgroup;
+		$lastdonate = $request->input('last_donate');
+		$gender=$request->gender;
+		$password_hash=Hash::make($password);
+		\DB::table('users')->insert([
+    	['fname' => $firstname, 'lname' => $lastname, 'email'=>$email, 'password'=>$password_hash,'division'=>$division, 'weight'=>$weight, 'number'=>$number, 'DOB'=>$DOB, 'lastdonate'=>$lastdonate, 'bloodgroup'=>$bloodgroup, 'gender'=>$gender ]
+	]);
+		return redirect('/admins_view')->with('message','New user added.');
+      //echo "Record inserted successfully.<br/>";
+      //echo '<a href = "/insert">Click Here</a> to go back.';
+	}
+		else
+		//echo "wrong pass";
+		return redirect('/register')->with('message','confirmation password not matched');
+		
+	}
+	
+	
+	
 }
